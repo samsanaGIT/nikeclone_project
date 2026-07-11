@@ -1,15 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import {
   Header,
-  HeroCarousel,
-  CategoryGrid,
-  PromoBanner,
-  ACGBanner,
-  RunFreeBanner,
-  VaporEdgeBanner,
-  KDBanner,
-  StrikingApproachBanner,
-  Trending,
   Footer,
   SearchModal,
   BagDrawer,
@@ -19,6 +11,8 @@ import {
 import { trendingProducts } from "./data/products";
 import { X } from "lucide-react";
 import "./App.css";
+import LandingPage from "./pages/LandingPage";
+import MenPage from "./pages/MenPage";
 
 export default function App() {
   // Pre-populate with some items so the bag looks realistic right away
@@ -217,36 +211,18 @@ export default function App() {
         setMobileMenuOpen={setMobileMenuOpen}
       />
 
-      {/* Hero Showcase Section */}
-      <HeroCarousel />
-
-      {/* Categories Grid */}
-      <CategoryGrid />
-
-      {/* Secondary Promo Section */}
-      <PromoBanner />
-
-      {/* ACG Radical AirFlow Section */}
-      <ACGBanner />
-
-      {/* Run Free, Play Forever Section */}
-      <RunFreeBanner />
-
-      {/* Nike Vapor Edge 360 Section */}
-      <VaporEdgeBanner />
-
-      {/* KD Nothing Sweet About It Section */}
-      <KDBanner />
-
-      {/* A Striking Approach Tennis Section */}
-      <StrikingApproachBanner />
-
-      {/* Trending Products Catalog */}
-      <Trending
-        onAddToBag={handleAddToBag}
-        onToggleWishlist={handleToggleWishlist}
-        wishlist={wishlist}
-      />
+      <main className="flex-1 w-full">
+        <Routes>
+          <Route path="/" element={
+            <LandingPage 
+              onAddToBag={handleAddToBag}
+              onToggleWishlist={handleToggleWishlist}
+              wishlist={wishlist}
+            />
+          } />
+          <Route path="/men" element={<MenPage />} />
+        </Routes>
+      </main>
 
       {/* Global Footer */}
       <Footer />

@@ -7,3 +7,8 @@ export { default as VaporEdgeBanner } from "./VaporEdgeBanner";
 export { default as KDBanner } from "./KDBanner";
 export { default as StrikingApproachBanner } from "./StrikingApproachBanner";
 export { default as Trending } from "./Trending";
+export { default as MenHeroCarousel } from "./MenHeroCarousel";
+export { default as MenFeaturedCategories } from "./MenFeaturedCategories";
+export { default as MenTrendingNow } from "./MenTrendingNow";
+export { default as MenFeaturedFootwear } from "./MenFeaturedFootwear";
+export { default as MenShopBySport } from "./MenShopBySport";

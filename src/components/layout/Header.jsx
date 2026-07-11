@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { Swoosh, Jumpman, Converse, SearchIcon, HeartIcon, BagIcon } from "../common/BrandIcons";
 
@@ -269,25 +270,40 @@ export default function Header({
           }`}
         >
           {/* Logo (Left) */}
-          <div className="flex-shrink-0 cursor-pointer">
+          <Link to="/" className="flex-shrink-0 cursor-pointer block">
             <Swoosh className="h-5 md:h-6 w-auto text-black" />
-          </div>
+          </Link>
 
           {/* Desktop Nav Links (Center) */}
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 font-semibold text-sm tracking-wide text-zinc-900 ml-12">
             {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
-                className="relative py-2 group hover:text-black transition-colors"
-                onMouseEnter={() => setActiveDropdown(link)}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                {link}
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-black transition-all ${
-                  activeDropdown === link ? "w-full" : "w-0 group-hover:w-full"
-                }`} />
-              </a>
+              link === "Men" ? (
+                <Link
+                  key={link}
+                  to="/men"
+                  className="relative py-2 group hover:text-black transition-colors"
+                  onMouseEnter={() => setActiveDropdown(link)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
+                  {link}
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-black transition-all ${
+                    activeDropdown === link ? "w-full" : "w-0 group-hover:w-full"
+                  }`} />
+                </Link>
+              ) : (
+                <a
+                  key={link}
+                  href={`#${link.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
+                  className="relative py-2 group hover:text-black transition-colors"
+                  onMouseEnter={() => setActiveDropdown(link)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
+                  {link}
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-black transition-all ${
+                    activeDropdown === link ? "w-full" : "w-0 group-hover:w-full"
+                  }`} />
+                </a>
+              )
             ))}
           </nav>
 
@@ -406,7 +422,9 @@ export default function Header({
         }`}
       >
         <div className="flex items-center justify-between border-b border-gray-100 px-6 py-5">
-          <Swoosh className="h-5 w-auto text-black" />
+          <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+            <Swoosh className="h-5 w-auto text-black block" />
+          </Link>
           <button
             onClick={() => setMobileMenuOpen(false)}
             className="rounded-full p-2 text-zinc-500 hover:bg-gray-100 hover:text-black transition-colors"
@@ -419,15 +437,27 @@ export default function Header({
           {/* Main Links */}
           <nav className="flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between font-bold text-lg text-black hover:text-zinc-600 transition-colors"
-              >
-                {link}
-                <ChevronRight className="h-5 w-5 text-gray-400" />
-              </a>
+              link === "Men" ? (
+                <Link
+                  key={link}
+                  to="/men"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between font-bold text-lg text-black hover:text-zinc-600 transition-colors"
+                >
+                  {link}
+                  <ChevronRight className="h-5 w-5 text-gray-400" />
+                </Link>
+              ) : (
+                <a
+                  key={link}
+                  href={`#${link.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between font-bold text-lg text-black hover:text-zinc-600 transition-colors"
+                >
+                  {link}
+                  <ChevronRight className="h-5 w-5 text-gray-400" />
+                </a>
+              )
             ))}
           </nav>
 
