@@ -1,27 +1,15 @@
-# Nike Clone - E-Commerce Web Application
+# Nike Clone Project
 
-A fully responsive, high-performance e-commerce frontend inspired by Nike.com. Built with modern web technologies, this project demonstrates advanced UI/UX principles, dynamic layouts, and interactive components designed for a premium shopping experience.
+Hi! This is my student project where I built a clone of the Nike e-commerce website to practice my frontend development skills.
 
-## 🚀 Tech Stack
+## What I Learned & Used
+- **React**: For building the user interface and components.
+- **Vite**: To run and build the project quickly.
+- **Tailwind CSS**: To style everything and make it look like the real Nike site.
+- **Responsive Design**: Making sure the site looks good on both phones and computer screens.
 
-- **React 18** - UI Library
-- **Vite** - Build Tool & Development Server
-- **Tailwind CSS** - Utility-first styling for rapid, responsive design
-- **Lucide React** - Premium scalable iconography
-
-## ✨ Key Features
-
-- **Responsive Design**: Pixel-perfect layouts that adapt seamlessly from mobile devices to ultra-wide desktop monitors.
-- **Dynamic Carousels**: Custom-built, interactive image sliders and product carousels (e.g., Hero Banners, Trending Products).
-- **Modern UI Patterns**: Sticky sidebars, glassmorphism overlays, custom scrollbars, and fluid hover animations.
-- **Optimized Assets**: Structured and categorized static assets for high performance and easy maintainability.
-
-## 🛠️ Getting Started
-
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
-
-### Installation
+## How to Run This Project
+If you want to run this project on your own computer, follow these steps:
 
 1. Clone the repository:
    ```bash
@@ -29,35 +17,17 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
    cd nikeclone_sana
    ```
 
-2. Install dependencies:
+2. Install the dependencies:
    ```bash
    npm install
    ```
 
-3. Start the development server:
+3. Start the local server:
    ```bash
    npm run dev
    ```
 
-4. Open your browser and visit `http://localhost:5173` to view the application.
+4. Open your browser and go to `http://localhost:5173`.
 
-## 📁 Project Structure
-
-```text
-src/
-├── components/
-│   ├── common/      # Reusable UI elements (Icons, Buttons)
-│   ├── layout/      # Global layout components (Header, Footer, Navigation)
-│   └── sections/    # Page-specific sections (Hero, Trending, Categories)
-├── data/            # Static data and product configurations
-├── pages/           # Route-level page components
-└── index.css        # Global stylesheet and Tailwind configurations
-```
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
-
-## 📝 License
-
-This project is for educational and portfolio purposes. All product images and brand logos are the property of Nike, Inc.
+## Disclaimer
+This is strictly a student learning project. All images, logos, and brand assets belong to Nike, Inc. This project is not affiliated with Nike in any way.
