@@ -12,7 +12,6 @@ body {
   scroll-behavior: smooth;
   background-color: #ffffff;
   color: #111111;
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -44,4 +43,22 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom rounded pill scrollbar */
+.pill-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+.pill-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.pill-scrollbar::-webkit-scrollbar-thumb {
+  background: #707072;
+  border-radius: 9999px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+.pill-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #111111;
+  border: 2px solid transparent;
 }

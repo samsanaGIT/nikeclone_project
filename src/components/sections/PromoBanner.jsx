@@ -11,13 +11,13 @@ export default function PromoBanner() {
         </div>
 
         {/* Promo Image Container */}
-        <div className="relative w-full h-[50vh] md:h-[65vh] overflow-hidden bg-zinc-950 group">
+        <div className="relative w-full overflow-hidden bg-zinc-950 group">
           {/* Subtle gradient overlay at the bottom to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
           <img
-            src="/promo_sweatproof.png"
+            src="/assets/banners/promo_sweatproof.png"
             alt="SWEAT. PROOF."
-            className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-transform duration-700 ease-out"
+            className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 ease-out"
           />
 
           {/* Details Overlay */}

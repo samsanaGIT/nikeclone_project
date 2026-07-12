@@ -7,7 +7,7 @@ export default function ACGBanner() {
         {/* ACG Logo */}
         <div className="mb-10 flex justify-center">
           <img
-            src="/acg_logo.png"
+            src="/assets/banners/acg_logo.png"
             alt="Nike ACG"
             className="h-16 md:h-20 w-auto object-contain"
           />
@@ -16,9 +16,9 @@ export default function ACGBanner() {
         {/* Three-Column Photo Grid */}
         <div className="relative w-full grid grid-cols-1 md:grid-cols-3 gap-0.5 overflow-hidden">
           {/* Photo 1 — left column with text overlay */}
-          <div className="relative h-[40vh] md:h-[50vh] overflow-hidden group">
+          <div className="relative aspect-[4/5] overflow-hidden group">
             <img
-              src="/acg_photo1.png"
+              src="/assets/banners/acg_photo1.png"
               alt="ACG Radical AirFlow — model with mesh tank"
               className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
             />
@@ -35,18 +35,18 @@ export default function ACGBanner() {
           </div>
 
           {/* Photo 2 — center column */}
-          <div className="relative h-[40vh] md:h-[50vh] overflow-hidden group">
+          <div className="relative aspect-[4/5] overflow-hidden group">
             <img
-              src="/acg_photo2.png"
+              src="/assets/banners/acg_photo2.png"
               alt="ACG Radical AirFlow — perforated shoe detail"
               className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
             />
           </div>
 
           {/* Photo 3 — right column */}
-          <div className="relative h-[40vh] md:h-[50vh] overflow-hidden group">
+          <div className="relative aspect-[4/5] overflow-hidden group">
             <img
-              src="/acg_photo3.png"
+              src="/assets/banners/acg_photo3.png"
               alt="ACG Radical AirFlow — model with bucket hat"
               className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
             />

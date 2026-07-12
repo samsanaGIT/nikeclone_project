@@ -2,9 +2,9 @@ import React from "react";
 
 export default function MenShopBySport() {
   const sports = [
-    { title: "Shop Soccer", image: "/image copy 3.png", link: "#soccer" },
-    { title: "Shop Baseball", image: "/image copy 4.png", link: "#baseball" },
-    { title: "Shop Golf", image: "/image copy 5.png", link: "#golf" },
+    { title: "Shop Soccer", image: "/assets/icons/icons_img_15.png", link: "#soccer" },
+    { title: "Shop Baseball", image: "/assets/icons/icons_img_16.png", link: "#baseball" },
+    { title: "Shop Golf", image: "/assets/icons/icons_img_17.png", link: "#golf" },
   ];
 
   return (

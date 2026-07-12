@@ -2,20 +2,21 @@ import React from "react";
 
 export default function StrikingApproachBanner() {
   return (
-    <section className="w-full bg-white py-12 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
+    <section className="w-full bg-white py-12">
+      <div className="w-full flex flex-col items-center">
         {/* Cross/Plus Logo */}
         <div className="flex justify-center mb-6">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="16" y="2" width="8" height="36" fill="black" />
-            <rect x="2" y="16" width="36" height="8" fill="black" />
-          </svg>
+          <img 
+            src="/assets/banners/banners_img_8.png" 
+            alt="NikeCourt Logo" 
+            className="h-16 md:h-20 w-auto object-contain"
+          />
         </div>
 
         {/* Single Contained Banner Image */}
         <div className="relative w-full overflow-hidden group">
           <img
-            src="/tennis_striking.png"
+            src="/assets/banners/tennis_striking.png"
             alt="Nike Tennis — A Striking Approach — athletes in white on green"
             className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 ease-out"
           />

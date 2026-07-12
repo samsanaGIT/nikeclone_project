@@ -6,15 +6,17 @@ export default function KDBanner() {
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* KD Logo */}
         <div className="flex justify-center mb-6">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <text x="50%" y="55%" textAnchor="middle" dominantBaseline="middle" fontFamily="Arial Black, sans-serif" fontSize="28" fontWeight="900" fill="black">KD</text>
-          </svg>
+          <img 
+            src="/assets/banners/banners_img_7.png" 
+            alt="KD Logo" 
+            className="h-16 md:h-20 w-auto object-contain"
+          />
         </div>
 
         {/* Single Contained Banner Image */}
         <div className="relative w-full overflow-hidden group">
           <img
-            src="/kd_shoe.png"
+            src="/assets/banners/kd_shoe.png"
             alt="KD Basketball Shoe — Nothing Sweet About It"
             className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 ease-out"
           />

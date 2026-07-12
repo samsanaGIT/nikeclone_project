@@ -2,16 +2,16 @@ import React from "react";
 
 export default function RunFreeBanner() {
   return (
-    <section className="w-full bg-white py-12 px-6 md:px-12">
+    <section className="w-full bg-white py-12">
       {/* Centered Heading */}
       <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-black text-center mb-8 leading-tight">
         RUN FREE, PLAY FOREVER
       </h2>
 
       {/* Single Banner Image — contained */}
-      <div className="max-w-7xl mx-auto relative overflow-hidden group">
+      <div className="w-full relative overflow-hidden group">
         <img
-          src="/runfree_banner.png"
+          src="/assets/banners/runfree_banner.png"
           alt="Kids playing and running in Nike Free shoes on a green field"
           className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 ease-out"
         />

@@ -3,7 +3,7 @@
 export const heroSlides = [
   {
     id: 1,
-    image: "/hero_england_huddle.jpg",
+    image: "/assets/products/hero_england_huddle.jpg",
     headline: "THREE LION HEARTED",
     subheadline: "Designed for the ones who leave everything on the pitch. Rep the England National Team in style.",
     ctaText: "Shop England",
@@ -11,7 +11,7 @@ export const heroSlides = [
   },
   {
     id: 2,
-    image: "/hero_ronaldo.png",
+    image: "/assets/products/products_img_3.png",
     headline: "HIS LEGEND LIVES ON",
     subheadline: "Cristiano Ronaldo's summer comes to an end. But, his story isn't over yet.",
     ctaText: "Shop Cristiano Ronaldo",
@@ -23,19 +23,19 @@ export const categoryCards = [
   {
     id: 1,
     title: "Shop Soccer Lifestyle",
-    image: "/category_soccer_lifestyle.png",
+    image: "/assets/products/category_soccer_lifestyle.png",
     link: "#lifestyle"
   },
   {
     id: 2,
     title: "Shop Cleats",
-    image: "/category_cleats.png",
+    image: "/assets/products/category_cleats.png",
     link: "#cleats"
   },
   {
     id: 3,
     title: "Rep Your Team",
-    image: "/category_rep_team.png",
+    image: "/assets/products/category_rep_team.png",
     link: "#rep-your-team"
   }
 ];
@@ -46,7 +46,7 @@ export const trendingProducts = [
     name: "Air Jordan 1 Retro High",
     price: 180,
     category: "Men's Shoes",
-    image: "/trending_p1.png",
+    image: "/assets/products/trending_p1.png",
     color: "Black/White/Gym Red"
   },
   {
@@ -54,7 +54,7 @@ export const trendingProducts = [
     name: "Air Max Pulse",
     price: 160,
     category: "Men's Shoes",
-    image: "/trending_p2.png",
+    image: "/assets/products/trending_p2.png",
     color: "Red/Black/White"
   },
   {
@@ -62,7 +62,7 @@ export const trendingProducts = [
     name: "Swoosh Graphic Tee",
     price: 35,
     category: "Unisex Clothing",
-    image: "/trending_p3.png",
+    image: "/assets/products/trending_p3.png",
     color: "White/Black"
   },
   {
@@ -70,7 +70,7 @@ export const trendingProducts = [
     name: "Nike Dunk Low",
     price: 115,
     category: "Men's Shoes",
-    image: "/trending_p4.png",
+    image: "/assets/products/trending_p4.png",
     color: "Sail/Light Orewood"
   },
   {
@@ -78,7 +78,7 @@ export const trendingProducts = [
     name: "Air Force 1 '07",
     price: 115,
     category: "Women's Shoes",
-    image: "/trending_p5.png",
+    image: "/assets/products/trending_p5.png",
     color: "Triple White"
   },
   {
@@ -86,7 +86,7 @@ export const trendingProducts = [
     name: "24.7 Collection Hoodie",
     price: 85,
     category: "Men's Apparel",
-    image: "/trending_p6.png",
+    image: "/assets/products/trending_p6.png",
     color: "Fleece Grey"
   },
   {
@@ -94,7 +94,7 @@ export const trendingProducts = [
     name: "Vomero 5",
     price: 160,
     category: "Women's Running Shoes",
-    image: "/trending_p7.png",
+    image: "/assets/products/trending_p7.png",
     color: "Platinum Tint/Photon Dust"
   },
   {
@@ -102,7 +102,7 @@ export const trendingProducts = [
     name: "Rejuven8 Recovery Slide",
     price: 45,
     category: "Unisex Slide",
-    image: "/trending_p8.png",
+    image: "/assets/products/trending_p8.png",
     color: "Black/Volt"
   },
   {
@@ -110,7 +110,7 @@ export const trendingProducts = [
     name: "ACG",
     price: 130,
     category: "Men's Shoes",
-    image: "/trending_p9.png",
+    image: "/assets/products/trending_p9.png",
     color: "Mineral/Black"
   },
   {
@@ -118,7 +118,7 @@ export const trendingProducts = [
     name: "Pegasus 41",
     price: 140,
     category: "Men's Running Shoes",
-    image: "/trending_p10.png",
+    image: "/assets/products/trending_p10.png",
     color: "Volt/Black/White"
   },
   {
@@ -126,7 +126,7 @@ export const trendingProducts = [
     name: "Vomero Plus",
     price: 170,
     category: "Men's Shoes",
-    image: "/trending_p11.png",
+    image: "/assets/products/trending_p11.png",
     color: "Neon Green/Black"
   },
   {
@@ -134,7 +134,7 @@ export const trendingProducts = [
     name: "Metcon 9 Training",
     price: 150,
     category: "Men's Training Shoes",
-    image: "/trending_p12.png",
+    image: "/assets/products/trending_p12.png",
     color: "Anthracite/White"
   },
   {
@@ -142,7 +142,7 @@ export const trendingProducts = [
     name: "Fan Gear Strike Top",
     price: 75,
     category: "Men's Soccer Jersey",
-    image: "/trending_p13.png",
+    image: "/assets/products/trending_p13.png",
     color: "Navy/Gym Red"
   },
   {
@@ -150,7 +150,7 @@ export const trendingProducts = [
     name: "Jordan Retro 4",
     price: 215,
     category: "Men's Shoes",
-    image: "/trending_p14.png",
+    image: "/assets/products/trending_p14.png",
     color: "Military Blue"
   },
   {
@@ -158,7 +158,7 @@ export const trendingProducts = [
     name: "Sabrina 3",
     price: 130,
     category: "Basketball Shoes",
-    image: "/trending_p15.png",
+    image: "/assets/products/trending_p15.png",
     color: "Pure Platinum"
   },
   {
@@ -166,7 +166,7 @@ export const trendingProducts = [
     name: "Tatum 4",
     price: 140,
     category: "Basketball Shoes",
-    image: "/trending_p16.png",
+    image: "/assets/products/trending_p16.png",
     color: "Infrared/Black"
   }
 ];

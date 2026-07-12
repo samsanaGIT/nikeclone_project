@@ -4,6 +4,7 @@ import { Swoosh } from "../common/BrandIcons";
 
 export default function Footer() {
   const [openAccordions, setOpenAccordions] = useState({});
+  const [isTopGridHovered, setIsTopGridHovered] = useState(false);
 
   const toggleAccordion = (section) => {
     setOpenAccordions((prev) => ({
@@ -15,19 +16,32 @@ export default function Footer() {
   const firstGrid = [
     {
       title: "Featured",
-      links: ["Air Force 1", "Jordan 1", "Air Max 90", "Air Max 95"]
+      links: [
+        "Air Force 1", "Jordan 1", "Air Max 90", "Air Max 95",
+        "Vomero", "Metcon", "Pegasus", "Rejuven8"
+      ]
     },
     {
       title: "Shoes",
-      links: ["All Shoes", "Jordan Shoes", "Running Shoes", "Basketball Shoes"]
+      links: [
+        "All Shoes", "Jordan Shoes", "Running Shoes", "Basketball Shoes",
+        "Tennis Shoes", "Training Shoes", "Custom Shoes", "Sale Shoes", "Soccer Cleats"
+      ]
     },
     {
       title: "Clothing",
-      links: ["All Clothing", "Tops & T-Shirts", "Shorts", "Hoodies & Pullovers"]
+      links: [
+        "All Clothing", "Tops & T-Shirts", "Shorts", "Hoodies & Pullovers",
+        "Joggers & Sweatpants", "Sports Bras", "Pants & Tights", "Socks",
+        "Yoga", "NikeLab", "Plus Size", "Big & Tall", "Sale Clothing"
+      ]
     },
     {
       title: "Kids",
-      links: ["Infant & Toddler Shoes", "Kids Shoes", "Kids Basketball Shoes", "Kids Running Shoes"]
+      links: [
+        "Infant & Toddler Shoes", "Kids Shoes", "Kids Basketball Shoes", "Kids Running Shoes",
+        "Kids Jordan Shoes", "Kids Clothing", "Kids Backpacks", "Kids Socks", "Kids Sale"
+      ]
     }
   ];
 
@@ -65,9 +79,14 @@ export default function Footer() {
         </div>
 
         {/* 4-Column Grid: Featured / Shoes / Clothing / Kids */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 border-t border-gray-100 pt-10 pb-4">
+        <div 
+          className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 border-t border-gray-100 pt-10 pb-4 relative"
+          onMouseEnter={() => setIsTopGridHovered(true)}
+          onMouseLeave={() => setIsTopGridHovered(false)}
+        >
           {firstGrid.map((group) => {
             const isOpen = !!openAccordions[group.title];
+            const visibleLinks = isTopGridHovered ? group.links : group.links.slice(0, 4);
             return (
               <div key={group.title} className="border-b border-gray-100 md:border-b-0 pb-4 md:pb-0">
                 {/* Mobile Accordion Header */}
@@ -80,17 +99,17 @@ export default function Footer() {
                 </button>
 
                 {/* Desktop Header */}
-                <h3 className="hidden md:block font-semibold text-sm text-black mb-4">
+                <h3 className="hidden md:block font-semibold text-sm text-black mb-6">
                   {group.title}
                 </h3>
 
                 {/* Links list */}
                 <ul
-                  className={`space-y-3 text-[13px] font-normal text-zinc-500 md:block ${
+                  className={`space-y-3.5 text-[13px] font-medium text-zinc-500 md:block ${
                     isOpen ? "block mt-2" : "hidden"
                   }`}
                 >
-                  {group.links.map((link) => (
+                  {visibleLinks.map((link) => (
                     <li key={link}>
                       <a href={`#${link.toLowerCase().replace(/[^a-z0-9]/g, "-")}`} className="hover:text-black transition-colors">
                         {link}
@@ -166,7 +185,7 @@ export default function Footer() {
           <a href="#privacy" className="hover:text-black transition-colors">Nike Privacy Policy</a>
           <a href="#privacy-choices" className="hover:text-black flex items-center gap-1 transition-colors">
             <span className="inline-flex items-center">
-              <span className="inline-block bg-blue-600 text-white px-1 rounded-[2px] text-[7px] font-black mr-1 leading-none py-0.5">✓</span>
+              <img src="/assets/icons/icons_img_1.png" alt="Privacy Choices Icon" className="h-6 w-auto mr-1" />
               <span>Your Privacy Choices</span>
             </span>
           </a>

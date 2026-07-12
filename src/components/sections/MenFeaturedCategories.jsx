@@ -4,17 +4,17 @@ export default function MenFeaturedCategories() {
   const categories = [
     {
       title: "New Arrivals",
-      image: "/menshoes.png",
+      image: "/assets/categories/menshoes.png",
       link: "#new-arrivals",
     },
     {
       title: "Best Sellers",
-      image: "/menshoes1.png",
+      image: "/assets/categories/menshoes1.png",
       link: "#best-sellers",
     },
     {
       title: "Latest Drops",
-      image: "/mensheos2.png",
+      image: "/assets/categories/mensheos2.png",
       link: "#latest-drops",
     },
   ];

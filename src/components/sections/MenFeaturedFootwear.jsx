@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 export default function MenFeaturedFootwear() {
   const footwearCategories = [
-    { name: "All Shoes", image: "/shoesicon.png", link: "#all-shoes" },
-    { name: "Basketball", image: "/shoesicon2.png", link: "#basketball" },
-    { name: "Jordan", image: "/image copy 2.png", link: "#jordan" },
-    { name: "Lifestyle", image: "/shoesicon4.png", link: "#lifestyle" },
-    { name: "Running", image: "/shoesicon5.png", link: "#running" },
-    { name: "Soccer", image: "/shoesicon6.png", link: "#soccer" },
-    { name: "ACG", image: "/shoesicon7.png", link: "#acg" },
-    { name: "Training", image: "/shoesicon8.png", link: "#training" },
+    { name: "All Shoes", image: "/assets/icons/shoesicon.png", link: "#all-shoes" },
+    { name: "Basketball", image: "/assets/icons/shoesicon2.png", link: "#basketball" },
+    { name: "Jordan", image: "/assets/icons/icons_img_6.png", link: "#jordan" },
+    { name: "Lifestyle", image: "/assets/icons/shoesicon4.png", link: "#lifestyle" },
+    { name: "Running", image: "/assets/icons/shoesicon5.png", link: "#running" },
+    { name: "Soccer", image: "/assets/icons/shoesicon6.png", link: "#soccer" },
+    { name: "ACG", image: "/assets/icons/shoesicon7.png", link: "#acg" },
+    { name: "Training", image: "/assets/icons/shoesicon8.png", link: "#training" },
   ];
 
   return (

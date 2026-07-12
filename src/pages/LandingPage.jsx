@@ -8,6 +8,9 @@ import {
   VaporEdgeBanner,
   KDBanner,
   StrikingApproachBanner,
+  JordanTheOneBanner,
+  JordanShoesCarousel,
+  JordanEverydayGame,
   Trending,
 } from "../components";
 
@@ -37,6 +40,15 @@ export default function LandingPage({ onAddToBag, onToggleWishlist, wishlist }) 
 
       {/* A Striking Approach Tennis Section */}
       <StrikingApproachBanner />
+
+      {/* Jordan THE ONE Section */}
+      <JordanTheOneBanner />
+
+      {/* Jordan Shoes Carousel (4 shoes) */}
+      <JordanShoesCarousel />
+
+      {/* Jordan Everyday Game Section */}
+      <JordanEverydayGame />
 
       {/* Trending Products Catalog */}
       <Trending

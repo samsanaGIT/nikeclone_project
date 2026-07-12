@@ -51,7 +51,7 @@ export default function HeroCarousel() {
           <img
             src={slide.image}
             alt={slide.headline}
-            className="w-full h-full object-cover object-center md:object-[center_20%]"
+            className="w-full h-full object-cover object-center"
           />
 
           {/* Details Overlay */}

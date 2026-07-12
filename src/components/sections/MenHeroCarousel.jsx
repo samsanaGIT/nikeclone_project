@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function MenHeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -38,7 +39,7 @@ export default function MenHeroCarousel() {
         }`}
       >
         <img
-          src="/herosession.png"
+          src="/assets/hero/herosession.png"
           alt="A Striking Approach"
           className="w-full h-full object-cover object-center"
         />
@@ -53,12 +54,12 @@ export default function MenHeroCarousel() {
           <p className="text-sm md:text-base font-medium drop-shadow-md mb-6">
             NikeCourt's performance tennis gear is built for champions.
           </p>
-          <a
-            href="#shop-tennis"
+          <Link
+            to="/responsive-cushioning"
             className="inline-flex items-center justify-center h-10 px-8 bg-white hover:bg-zinc-200 text-black font-bold rounded-full text-sm shadow-lg transition-transform hover:scale-105"
           >
             Shop
-          </a>
+          </Link>
         </div>
 
         {/* Pagination dots for Slide 0: Center bottom */}
@@ -85,7 +86,7 @@ export default function MenHeroCarousel() {
         }`}
       >
         <img
-          src="/herosession1.png"
+          src="/assets/hero/herosession1.png"
           alt="Run Free"
           className="w-full h-full object-cover object-center"
         />
@@ -100,12 +101,12 @@ export default function MenHeroCarousel() {
             Feel the power of full-length, curved Air Zoom.
           </p>
           <div>
-            <a
-              href="#shop-pegasus"
+            <Link
+              to="/responsive-cushioning"
               className="inline-flex items-center justify-center h-10 px-8 bg-white hover:bg-zinc-200 text-black font-bold rounded-full text-sm shadow-lg transition-transform hover:scale-105"
             >
               Shop
-            </a>
+            </Link>
           </div>
         </div>
 

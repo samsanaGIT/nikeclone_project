@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { X } from "lucide-react";
-import { SearchIcon, HeartIcon, BagIcon } from "../common/BrandIcons";
+import { X, Sparkles } from "lucide-react";
+import { Swoosh, SearchIcon, HeartIcon, BagIcon } from "../common/BrandIcons";
 import { trendingProducts } from "../../data/products";
 
 export default function SearchModal({ isOpen, onClose, onAddToBag, onToggleWishlist, wishlist }) {
@@ -36,77 +36,74 @@ export default function SearchModal({ isOpen, onClose, onAddToBag, onToggleWishl
   const popularSearches = ["Jordan", "Air Max", "Vomero", "Pegasus", "Sabrina", "Fleece"];
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col bg-white/95 backdrop-blur-md transition-all duration-300">
+    <div className="fixed inset-0 z-50 flex flex-col bg-white transition-all duration-300">
       {/* Search Header */}
-      <div className="flex items-center justify-between border-b border-gray-100 px-6 py-4 md:px-12 md:py-6">
+      <div className="flex items-center justify-between px-6 py-4 md:px-12 md:py-6">
+        {/* Left: Logo */}
+        <div className="hidden md:flex items-center w-24">
+          <Swoosh className="h-6 w-auto text-black" />
+        </div>
+
         {/* Search Input Group */}
-        <div className="flex flex-1 items-center max-w-3xl">
-          <SearchIcon className="h-6 w-6 text-gray-500 mr-4" />
+        <div className="flex flex-1 items-center max-w-3xl mx-auto bg-[#F5F5F5] rounded-full px-5 py-2.5">
+          <SearchIcon className="h-5 w-5 text-zinc-500 mr-3" />
           <input
             ref={inputRef}
             type="text"
-            placeholder="Search products, clothing, shoes..."
+            placeholder="Search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full text-lg md:text-xl font-normal outline-none placeholder-gray-400 bg-transparent text-black"
+            className="w-full text-base font-medium outline-none placeholder-zinc-500 bg-transparent text-black"
           />
         </div>
 
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 hover:bg-gray-100 transition-colors text-black"
-        >
-          <X className="h-5 w-5" />
-        </button>
+        {/* Right: Cancel Button */}
+        <div className="w-24 flex justify-end">
+          <button
+            onClick={onClose}
+            className="text-base font-medium text-black hover:text-zinc-600 transition-colors"
+          >
+            Cancel
+          </button>
+        </div>
       </div>
 
       {/* Search Content */}
       <div className="flex-1 overflow-y-auto px-6 py-8 md:px-12">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-5xl">
           {query.trim() === "" ? (
             /* Recommendations & Popular Searches */
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex flex-col gap-10 max-w-4xl mx-auto mt-2 pl-4 md:pl-28">
+              {/* Ask NikeAI */}
+              <button className="flex items-center gap-4 hover:opacity-75 transition-opacity w-fit">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-b from-[#C4F627] to-[#88EC0C] shadow-sm">
+                  <Sparkles className="h-5 w-5 text-black fill-black" />
+                </div>
+                <span className="text-base font-medium text-black">Ask NikeAI</span>
+              </button>
+
+              {/* Popular Search Terms */}
               <div>
-                <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">
-                  Popular Searches
+                <h3 className="text-sm font-medium text-zinc-400 mb-4">
+                  Popular Search Terms
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {popularSearches.map((term) => (
+                  {[
+                    "back to school",
+                    "football",
+                    "jordan",
+                    "air max",
+                    "basketball shoes",
+                    "jordan 4",
+                    "soccer cleats",
+                    "nike mind"
+                  ].map((term) => (
                     <button
                       key={term}
-                      onClick={() => setQuery(term)}
-                      className="px-4 py-2 text-sm font-medium bg-gray-50 hover:bg-gray-100 rounded-full text-black transition-colors"
+                      className="px-5 py-2 text-sm font-medium bg-[#F5F5F5] hover:bg-zinc-200 rounded-full text-black transition-colors"
                     >
                       {term}
                     </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="md:col-span-2">
-                <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">
-                  Suggested Products
-                </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  {trendingProducts.slice(0, 3).map((product) => (
-                    <div
-                      key={product.id}
-                      className="group cursor-pointer"
-                      onClick={() => setQuery(product.name)}
-                    >
-                      <div className="aspect-square overflow-hidden bg-gray-50 rounded-lg mb-2">
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                      <h4 className="text-sm font-semibold text-black leading-tight group-hover:underline">
-                        {product.name}
-                      </h4>
-                      <p className="text-xs text-gray-500 mt-0.5">{product.category}</p>
-                    </div>
                   ))}
                 </div>
               </div>

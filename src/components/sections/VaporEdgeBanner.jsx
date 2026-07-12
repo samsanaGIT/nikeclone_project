@@ -14,9 +14,9 @@ export default function VaporEdgeBanner() {
         {/* Two-Column Photo Grid — contained */}
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-[3px] overflow-hidden">
           {/* Left — side view cleat */}
-          <div className="relative h-[35vh] md:h-[45vh] overflow-hidden group">
+          <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden group">
             <img
-              src="/vapor_cleat_left.jpg"
+              src="/assets/banners/vapor_cleat_left.jpg"
               alt="Nike Vapor Edge 360 cleats — side view on field"
               className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
             />
@@ -39,9 +39,9 @@ export default function VaporEdgeBanner() {
           </div>
 
           {/* Right — front view cleats */}
-          <div className="relative h-[35vh] md:h-[45vh] overflow-hidden group">
+          <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden group">
             <img
-              src="/vapor_cleat_right.png"
+              src="/assets/banners/vapor_cleat_right.png"
               alt="Nike Vapor Edge 360 cleats front view"
               className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
             />

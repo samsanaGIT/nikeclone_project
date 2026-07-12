@@ -5,13 +5,13 @@ export default function MenTrendingNow() {
     {
       subtitle: "Look of Soccer",
       title: "Off-Pitch Style",
-      image: "/image copy.png",
+      image: "/assets/products/products_img_1.png",
       link: "#shop-soccer",
     },
     {
       subtitle: "All Conditions Gear",
       title: "Seek All Conditions",
-      image: "/image.png",
+      image: "/assets/products/products_img_2.png",
       link: "#shop-acg",
     },
   ];

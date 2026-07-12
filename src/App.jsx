@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import {
   Header,
   Footer,
+  MenFooter,
+  CushionFooter,
   SearchModal,
   BagDrawer,
   HeartIcon,
@@ -13,6 +15,7 @@ import { X } from "lucide-react";
 import "./App.css";
 import LandingPage from "./pages/LandingPage";
 import MenPage from "./pages/MenPage";
+import ResponsiveCushioningPage from "./pages/ResponsiveCushioningPage";
 
 export default function App() {
   // Pre-populate with some items so the bag looks realistic right away
@@ -221,11 +224,16 @@ export default function App() {
             />
           } />
           <Route path="/men" element={<MenPage />} />
+          <Route path="/responsive-cushioning" element={<ResponsiveCushioningPage />} />
         </Routes>
       </main>
 
-      {/* Global Footer */}
-      <Footer />
+      {/* Footer rendering based on route */}
+      <Routes>
+        <Route path="/men" element={<MenFooter />} />
+        <Route path="/responsive-cushioning" element={<CushionFooter />} />
+        <Route path="*" element={<Footer />} />
+      </Routes>
 
       {/* Search Drawer Overlay */}
       <SearchModal

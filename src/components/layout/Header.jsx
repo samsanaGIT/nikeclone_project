@@ -333,25 +333,14 @@ export default function Header({
               title="Wishlist"
             >
               <HeartIcon className="h-5.5 w-5.5" />
-              {wishlistCount > 0 && (
-                <span className="absolute top-1 right-1 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-black text-[9px] font-bold text-white">
-                  {wishlistCount}
-                </span>
-              )}
             </button>
 
             {/* Bag Icon */}
             <button
-              onClick={onOpenBag}
               className="relative p-2 rounded-full hover:bg-gray-100 text-black transition-colors"
               title="Shopping Bag"
             >
               <BagIcon className="h-5.5 w-5.5" />
-              {bagCount > 0 && (
-                <span className="absolute top-1 right-1 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-black text-[9px] font-bold text-white">
-                  {bagCount}
-                </span>
-              )}
             </button>
 
             {/* Hamburger Button (Mobile Only) */}
