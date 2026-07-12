@@ -23,14 +23,17 @@ export default function MenTrendingNow() {
       </h2>
       <div className="flex flex-col md:flex-row gap-4 md:gap-6">
         {promos.map((promo, idx) => (
-          <div key={idx} className="relative w-full md:w-1/2 aspect-[4/5] group overflow-hidden bg-gray-100">
+          <div
+            key={idx}
+            className="relative w-full md:w-1/2 aspect-[4/5] group overflow-hidden bg-gray-100"
+          >
             {/* Image */}
             <img
               src={promo.image}
               alt={promo.title}
               className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
-            
+
             {/* Gradient Overlay for Text Readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
 

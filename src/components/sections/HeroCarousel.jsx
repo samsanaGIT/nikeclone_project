@@ -97,7 +97,10 @@ export default function HeroCarousel() {
           title={isPlaying ? "Pause Slideshow" : "Play Slideshow"}
         >
           {/* Circular Progress SVG */}
-          <svg className="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+          <svg
+            className="absolute inset-0 w-full h-full transform -rotate-90"
+            viewBox="0 0 36 36"
+          >
             {/* Background track */}
             <circle
               cx="18"

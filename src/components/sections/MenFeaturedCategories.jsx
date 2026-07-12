@@ -34,7 +34,7 @@ export default function MenFeaturedCategories() {
               alt={cat.title}
               className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
-            
+
             {/* Gradient Overlay for Text Readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent pointer-events-none" />
 

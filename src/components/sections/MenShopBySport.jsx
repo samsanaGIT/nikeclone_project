@@ -2,9 +2,21 @@ import React from "react";
 
 export default function MenShopBySport() {
   const sports = [
-    { title: "Shop Soccer", image: "/assets/icons/icons_img_15.png", link: "#soccer" },
-    { title: "Shop Baseball", image: "/assets/icons/icons_img_16.png", link: "#baseball" },
-    { title: "Shop Golf", image: "/assets/icons/icons_img_17.png", link: "#golf" },
+    {
+      title: "Shop Soccer",
+      image: "/assets/icons/icons_img_15.png",
+      link: "#soccer",
+    },
+    {
+      title: "Shop Baseball",
+      image: "/assets/icons/icons_img_16.png",
+      link: "#baseball",
+    },
+    {
+      title: "Shop Golf",
+      image: "/assets/icons/icons_img_17.png",
+      link: "#golf",
+    },
   ];
 
   return (
@@ -27,7 +39,7 @@ export default function MenShopBySport() {
               alt={sport.title}
               className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
-            
+
             {/* Gradient Overlay for Text Readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent pointer-events-none" />
 

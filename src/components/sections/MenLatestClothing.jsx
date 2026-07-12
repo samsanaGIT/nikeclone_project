@@ -16,9 +16,12 @@ export default function MenLatestClothing() {
     <section className="w-full px-6 md:px-12 py-12 md:py-16 bg-white">
       {/* Header */}
       <div className="mb-8 md:mb-10 text-center">
-        <h2 
+        <h2
           className="text-5xl md:text-6xl font-black text-black uppercase tracking-tighter"
-          style={{ fontFamily: "'Impact', sans-serif", transform: "scaleY(1.2)" }}
+          style={{
+            fontFamily: "'Impact', sans-serif",
+            transform: "scaleY(1.2)",
+          }}
         >
           Latest in Clothing
         </h2>
@@ -46,8 +49,10 @@ export default function MenLatestClothing() {
           ))}
         </div>
       </div>
-      
-      <style dangerouslySetInnerHTML={{__html: `
+
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         .hide-scrollbar::-webkit-scrollbar {
           display: none;
         }
@@ -55,7 +60,9 @@ export default function MenLatestClothing() {
           -ms-overflow-style: none;
           scrollbar-width: none;
         }
-      `}} />
+      `,
+        }}
+      />
     </section>
   );
 }

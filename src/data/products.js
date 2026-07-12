@@ -5,18 +5,20 @@ export const heroSlides = [
     id: 1,
     image: "/assets/products/hero_england_huddle.jpg",
     headline: "THREE LION HEARTED",
-    subheadline: "Designed for the ones who leave everything on the pitch. Rep the England National Team in style.",
+    subheadline:
+      "Designed for the ones who leave everything on the pitch. Rep the England National Team in style.",
     ctaText: "Shop England",
-    link: "#england"
+    link: "#england",
   },
   {
     id: 2,
     image: "/assets/products/products_img_3.png",
     headline: "HIS LEGEND LIVES ON",
-    subheadline: "Cristiano Ronaldo's summer comes to an end. But, his story isn't over yet.",
+    subheadline:
+      "Cristiano Ronaldo's summer comes to an end. But, his story isn't over yet.",
     ctaText: "Shop Cristiano Ronaldo",
-    link: "#ronaldo"
-  }
+    link: "#ronaldo",
+  },
 ];
 
 export const categoryCards = [
@@ -24,20 +26,20 @@ export const categoryCards = [
     id: 1,
     title: "Shop Soccer Lifestyle",
     image: "/assets/products/category_soccer_lifestyle.png",
-    link: "#lifestyle"
+    link: "#lifestyle",
   },
   {
     id: 2,
     title: "Shop Cleats",
     image: "/assets/products/category_cleats.png",
-    link: "#cleats"
+    link: "#cleats",
   },
   {
     id: 3,
     title: "Rep Your Team",
     image: "/assets/products/category_rep_team.png",
-    link: "#rep-your-team"
-  }
+    link: "#rep-your-team",
+  },
 ];
 
 export const trendingProducts = [
@@ -47,7 +49,7 @@ export const trendingProducts = [
     price: 180,
     category: "Men's Shoes",
     image: "/assets/products/trending_p1.png",
-    color: "Black/White/Gym Red"
+    color: "Black/White/Gym Red",
   },
   {
     id: "p2",
@@ -55,7 +57,7 @@ export const trendingProducts = [
     price: 160,
     category: "Men's Shoes",
     image: "/assets/products/trending_p2.png",
-    color: "Red/Black/White"
+    color: "Red/Black/White",
   },
   {
     id: "p3",
@@ -63,7 +65,7 @@ export const trendingProducts = [
     price: 35,
     category: "Unisex Clothing",
     image: "/assets/products/trending_p3.png",
-    color: "White/Black"
+    color: "White/Black",
   },
   {
     id: "p4",
@@ -71,7 +73,7 @@ export const trendingProducts = [
     price: 115,
     category: "Men's Shoes",
     image: "/assets/products/trending_p4.png",
-    color: "Sail/Light Orewood"
+    color: "Sail/Light Orewood",
   },
   {
     id: "p5",
@@ -79,7 +81,7 @@ export const trendingProducts = [
     price: 115,
     category: "Women's Shoes",
     image: "/assets/products/trending_p5.png",
-    color: "Triple White"
+    color: "Triple White",
   },
   {
     id: "p6",
@@ -87,7 +89,7 @@ export const trendingProducts = [
     price: 85,
     category: "Men's Apparel",
     image: "/assets/products/trending_p6.png",
-    color: "Fleece Grey"
+    color: "Fleece Grey",
   },
   {
     id: "p7",
@@ -95,7 +97,7 @@ export const trendingProducts = [
     price: 160,
     category: "Women's Running Shoes",
     image: "/assets/products/trending_p7.png",
-    color: "Platinum Tint/Photon Dust"
+    color: "Platinum Tint/Photon Dust",
   },
   {
     id: "p8",
@@ -103,7 +105,7 @@ export const trendingProducts = [
     price: 45,
     category: "Unisex Slide",
     image: "/assets/products/trending_p8.png",
-    color: "Black/Volt"
+    color: "Black/Volt",
   },
   {
     id: "p9",
@@ -111,7 +113,7 @@ export const trendingProducts = [
     price: 130,
     category: "Men's Shoes",
     image: "/assets/products/trending_p9.png",
-    color: "Mineral/Black"
+    color: "Mineral/Black",
   },
   {
     id: "p10",
@@ -119,7 +121,7 @@ export const trendingProducts = [
     price: 140,
     category: "Men's Running Shoes",
     image: "/assets/products/trending_p10.png",
-    color: "Volt/Black/White"
+    color: "Volt/Black/White",
   },
   {
     id: "p11",
@@ -127,7 +129,7 @@ export const trendingProducts = [
     price: 170,
     category: "Men's Shoes",
     image: "/assets/products/trending_p11.png",
-    color: "Neon Green/Black"
+    color: "Neon Green/Black",
   },
   {
     id: "p12",
@@ -135,7 +137,7 @@ export const trendingProducts = [
     price: 150,
     category: "Men's Training Shoes",
     image: "/assets/products/trending_p12.png",
-    color: "Anthracite/White"
+    color: "Anthracite/White",
   },
   {
     id: "p13",
@@ -143,7 +145,7 @@ export const trendingProducts = [
     price: 75,
     category: "Men's Soccer Jersey",
     image: "/assets/products/trending_p13.png",
-    color: "Navy/Gym Red"
+    color: "Navy/Gym Red",
   },
   {
     id: "p14",
@@ -151,7 +153,7 @@ export const trendingProducts = [
     price: 215,
     category: "Men's Shoes",
     image: "/assets/products/trending_p14.png",
-    color: "Military Blue"
+    color: "Military Blue",
   },
   {
     id: "p15",
@@ -159,7 +161,7 @@ export const trendingProducts = [
     price: 130,
     category: "Basketball Shoes",
     image: "/assets/products/trending_p15.png",
-    color: "Pure Platinum"
+    color: "Pure Platinum",
   },
   {
     id: "p16",
@@ -167,6 +169,6 @@ export const trendingProducts = [
     price: 140,
     category: "Basketball Shoes",
     image: "/assets/products/trending_p16.png",
-    color: "Infrared/Black"
-  }
+    color: "Infrared/Black",
+  },
 ];

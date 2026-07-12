@@ -8,7 +8,7 @@ import {
   SearchModal,
   BagDrawer,
   HeartIcon,
-  BagIcon
+  BagIcon,
 } from "./components";
 import { trendingProducts } from "./data/products";
 import { X } from "lucide-react";
@@ -25,21 +25,23 @@ export default function App() {
       name: "Air Jordan 1 Retro High",
       price: 180,
       category: "Men's Shoes",
-      image: "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=500&auto=format&fit=crop&q=80",
+      image:
+        "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=500&auto=format&fit=crop&q=80",
       color: "Black/White/Gym Red",
       selectedSize: "10.5",
-      quantity: 1
+      quantity: 1,
     },
     {
       id: "p6",
       name: "24.7 Collection Hoodie",
       price: 85,
       category: "Men's Apparel",
-      image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&auto=format&fit=crop&q=80",
+      image:
+        "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&auto=format&fit=crop&q=80",
       color: "Fleece Grey",
       selectedSize: "L",
-      quantity: 1
-    }
+      quantity: 1,
+    },
   ]);
 
   const [wishlist, setWishlist] = useState(["p2", "p7"]);
@@ -70,7 +72,7 @@ export default function App() {
           message: `Removed from Wishlist`,
           description: product?.name || "",
           type: "wishlist-remove",
-          image: product?.image
+          image: product?.image,
         });
         return prev.filter((id) => id !== productId);
       } else {
@@ -78,7 +80,7 @@ export default function App() {
           message: `Added to Wishlist`,
           description: product?.name || "",
           type: "wishlist-add",
-          image: product?.image
+          image: product?.image,
         });
         return [...prev, productId];
       }
@@ -89,14 +91,14 @@ export default function App() {
   const handleAddToBag = (product, size = "10") => {
     setBagItems((prev) => {
       const existingItem = prev.find(
-        (item) => item.id === product.id && item.selectedSize === size
+        (item) => item.id === product.id && item.selectedSize === size,
       );
 
       if (existingItem) {
         return prev.map((item) =>
           item.id === product.id && item.selectedSize === size
             ? { ...item, quantity: item.quantity + 1 }
-            : item
+            : item,
         );
       }
 
@@ -110,8 +112,8 @@ export default function App() {
           image: product.image,
           color: product.color,
           selectedSize: size,
-          quantity: 1
-        }
+          quantity: 1,
+        },
       ];
     });
 
@@ -120,7 +122,7 @@ export default function App() {
       description: product.name,
       type: "bag",
       image: product.image,
-      price: product.price
+      price: product.price,
     });
   };
 
@@ -134,15 +136,17 @@ export default function App() {
       prev.map((item) =>
         item.id === productId && item.selectedSize === size
           ? { ...item, quantity: newQty }
-          : item
-      )
+          : item,
+      ),
     );
   };
 
   // Remove item
   const handleRemoveItem = (productId, size) => {
     setBagItems((prev) =>
-      prev.filter((item) => !(item.id === productId && item.selectedSize === size))
+      prev.filter(
+        (item) => !(item.id === productId && item.selectedSize === size),
+      ),
     );
   };
 
@@ -174,8 +178,9 @@ export default function App() {
                 )}
                 {toast.type.startsWith("wishlist") && (
                   <HeartIcon
-                    className={`h-3.5 w-3.5 text-red-500 ${toast.type === "wishlist-add" ? "fill-red-500" : ""
-                      }`}
+                    className={`h-3.5 w-3.5 text-red-500 ${
+                      toast.type === "wishlist-add" ? "fill-red-500" : ""
+                    }`}
                   />
                 )}
                 <span className="text-xs font-bold text-black uppercase tracking-wider">
@@ -186,7 +191,9 @@ export default function App() {
                 {toast.description}
               </p>
               {toast.price && (
-                <p className="text-xs font-bold text-black mt-0.5">${toast.price}</p>
+                <p className="text-xs font-bold text-black mt-0.5">
+                  ${toast.price}
+                </p>
               )}
               {toast.type === "bag" && (
                 <button
@@ -216,15 +223,21 @@ export default function App() {
 
       <main className="flex-1 w-full">
         <Routes>
-          <Route path="/" element={
-            <LandingPage 
-              onAddToBag={handleAddToBag}
-              onToggleWishlist={handleToggleWishlist}
-              wishlist={wishlist}
-            />
-          } />
+          <Route
+            path="/"
+            element={
+              <LandingPage
+                onAddToBag={handleAddToBag}
+                onToggleWishlist={handleToggleWishlist}
+                wishlist={wishlist}
+              />
+            }
+          />
           <Route path="/men" element={<MenPage />} />
-          <Route path="/responsive-cushioning" element={<ResponsiveCushioningPage />} />
+          <Route
+            path="/responsive-cushioning"
+            element={<ResponsiveCushioningPage />}
+          />
         </Routes>
       </main>
 

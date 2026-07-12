@@ -7,27 +7,57 @@ export default function CushionFooter() {
   const toggleAccordion = (section) => {
     setOpenAccordions((prev) => ({
       ...prev,
-      [section]: !prev[section]
+      [section]: !prev[section],
     }));
   };
 
   const footerGrid = [
     {
       title: "Resources",
-      links: ["Gift Cards", "Corporate Sales", "Find a Store", "Membership", "Nike Journal", "Site Feedback"]
+      links: [
+        "Gift Cards",
+        "Corporate Sales",
+        "Find a Store",
+        "Membership",
+        "Nike Journal",
+        "Site Feedback",
+      ],
     },
     {
       title: "Help",
-      links: ["Get Help", "Order Status", "Shipping and Delivery", "Returns", "Order Cancellation", "Payment Options", "Gift Card Balance", "Contact Us"]
+      links: [
+        "Get Help",
+        "Order Status",
+        "Shipping and Delivery",
+        "Returns",
+        "Order Cancellation",
+        "Payment Options",
+        "Gift Card Balance",
+        "Contact Us",
+      ],
     },
     {
       title: "Company",
-      links: ["About Nike", "News", "Careers", "Investors", "Purpose", "Sustainability", "Accessibility"]
+      links: [
+        "About Nike",
+        "News",
+        "Careers",
+        "Investors",
+        "Purpose",
+        "Sustainability",
+        "Accessibility",
+      ],
     },
     {
       title: "Promotions & Discounts",
-      links: ["Student", "Military", "Teacher", "First Responders & Medical Professionals", "Birthday"]
-    }
+      links: [
+        "Student",
+        "Military",
+        "Teacher",
+        "First Responders & Medical Professionals",
+        "Birthday",
+      ],
+    },
   ];
 
   return (
@@ -38,14 +68,21 @@ export default function CushionFooter() {
           {footerGrid.map((group) => {
             const isOpen = !!openAccordions[group.title];
             return (
-              <div key={group.title} className="border-b border-gray-100 md:border-b-0 pb-4 md:pb-0">
+              <div
+                key={group.title}
+                className="border-b border-gray-100 md:border-b-0 pb-4 md:pb-0"
+              >
                 {/* Mobile Accordion Header */}
                 <button
                   onClick={() => toggleAccordion(group.title)}
                   className="w-full md:hidden flex items-center justify-between py-2 text-left font-semibold text-[13px] text-black"
                 >
                   <span>{group.title}</span>
-                  {isOpen ? <Minus className="h-3.5 w-3.5 text-zinc-500" /> : <Plus className="h-3.5 w-3.5 text-zinc-500" />}
+                  {isOpen ? (
+                    <Minus className="h-3.5 w-3.5 text-zinc-500" />
+                  ) : (
+                    <Plus className="h-3.5 w-3.5 text-zinc-500" />
+                  )}
                 </button>
 
                 {/* Desktop Header */}
@@ -61,7 +98,10 @@ export default function CushionFooter() {
                 >
                   {group.links.map((link) => (
                     <li key={link}>
-                      <a href={`#${link.toLowerCase().replace(/[^a-z0-9]/g, "-")}`} className="hover:text-black transition-colors">
+                      <a
+                        href={`#${link.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
+                        className="hover:text-black transition-colors"
+                      >
                         {link}
                       </a>
                     </li>
@@ -82,8 +122,10 @@ export default function CushionFooter() {
 
         {/* Legal Links & Copyright (Bottom Bar - Inline horiz list matching mockup) */}
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-4 border-gray-100 text-[11px] font-normal text-zinc-500">
-          <span className="font-medium text-zinc-600">© 2026 Nike, Inc. All Rights Reserved</span>
-          
+          <span className="font-medium text-zinc-600">
+            © 2026 Nike, Inc. All Rights Reserved
+          </span>
+
           <div className="relative group flex items-center">
             <button className="hover:text-black transition-colors flex items-center gap-0.5">
               <span>Guides</span>
@@ -91,16 +133,34 @@ export default function CushionFooter() {
             </button>
           </div>
 
-          <a href="#terms-sale" className="hover:text-black transition-colors">Terms of Sale</a>
-          <a href="#terms-use" className="hover:text-black transition-colors">Terms of Use</a>
-          <a href="#privacy" className="hover:text-black transition-colors">Nike Privacy Policy</a>
-          <a href="#privacy-choices" className="hover:text-black flex items-center gap-1 transition-colors">
+          <a href="#terms-sale" className="hover:text-black transition-colors">
+            Terms of Sale
+          </a>
+          <a href="#terms-use" className="hover:text-black transition-colors">
+            Terms of Use
+          </a>
+          <a href="#privacy" className="hover:text-black transition-colors">
+            Nike Privacy Policy
+          </a>
+          <a
+            href="#privacy-choices"
+            className="hover:text-black flex items-center gap-1 transition-colors"
+          >
             <span className="inline-flex items-center">
-              <img src="/assets/icons/icons_img_1.png" alt="Privacy Choices Icon" className="h-4 w-auto mr-1" />
+              <img
+                src="/assets/icons/icons_img_1.png"
+                alt="Privacy Choices Icon"
+                className="h-4 w-auto mr-1"
+              />
               <span>Your Privacy Choices</span>
             </span>
           </a>
-          <a href="#ca-supply-chains" className="hover:text-black transition-colors">CA Supply Chains Act</a>
+          <a
+            href="#ca-supply-chains"
+            className="hover:text-black transition-colors"
+          >
+            CA Supply Chains Act
+          </a>
         </div>
       </div>
     </footer>

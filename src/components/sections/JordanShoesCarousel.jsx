@@ -15,10 +15,13 @@ export default function JordanShoesCarousel() {
         {/* 4-Shoe Grid - No titles, just images */}
         <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           {shoes.map((src, idx) => (
-            <div key={idx} className="relative aspect-[4/3] md:aspect-square bg-white flex items-center justify-center p-4 group">
-              <img 
-                src={src} 
-                alt={`Jordan Shoe ${idx + 1}`} 
+            <div
+              key={idx}
+              className="relative aspect-[4/3] md:aspect-square bg-white flex items-center justify-center p-4 group"
+            >
+              <img
+                src={src}
+                alt={`Jordan Shoe ${idx + 1}`}
                 className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500 cursor-pointer"
               />
             </div>
@@ -26,7 +29,7 @@ export default function JordanShoesCarousel() {
         </div>
 
         {/* Centered Button */}
-        <a 
+        <a
           href="#shop-jordan-basketball"
           className="inline-block py-2 px-6 bg-black hover:bg-zinc-800 text-white font-medium rounded-full text-sm transition-colors"
         >

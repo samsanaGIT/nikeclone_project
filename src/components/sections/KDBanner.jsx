@@ -6,9 +6,9 @@ export default function KDBanner() {
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* KD Logo */}
         <div className="flex justify-center mb-6">
-          <img 
-            src="/assets/banners/banners_img_7.png" 
-            alt="KD Logo" 
+          <img
+            src="/assets/banners/banners_img_7.png"
+            alt="KD Logo"
             className="h-16 md:h-20 w-auto object-contain"
           />
         </div>

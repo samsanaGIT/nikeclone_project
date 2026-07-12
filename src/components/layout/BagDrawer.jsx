@@ -1,8 +1,17 @@
 import React from "react";
 import { X, Trash2, Plus, Minus, ArrowRight } from "lucide-react";
 
-export default function BagDrawer({ isOpen, onClose, bagItems, onUpdateQuantity, onRemoveItem }) {
-  const subtotal = bagItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+export default function BagDrawer({
+  isOpen,
+  onClose,
+  bagItems,
+  onUpdateQuantity,
+  onRemoveItem,
+}) {
+  const subtotal = bagItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0,
+  );
 
   return (
     <>
@@ -10,7 +19,9 @@ export default function BagDrawer({ isOpen, onClose, bagItems, onUpdateQuantity,
       <div
         onClick={onClose}
         className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-300 ${
-          isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+          isOpen
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
         }`}
       />
 
@@ -40,7 +51,9 @@ export default function BagDrawer({ isOpen, onClose, bagItems, onUpdateQuantity,
               <div className="rounded-full bg-gray-50 p-6 mb-4">
                 <Trash2 className="h-8 w-8 text-gray-400" />
               </div>
-              <p className="text-lg font-semibold text-black">Your bag is empty.</p>
+              <p className="text-lg font-semibold text-black">
+                Your bag is empty.
+              </p>
               <p className="text-sm text-gray-500 mt-1 max-w-xs">
                 Once you add products to your bag, they will appear here.
               </p>
@@ -54,7 +67,10 @@ export default function BagDrawer({ isOpen, onClose, bagItems, onUpdateQuantity,
           ) : (
             <div className="space-y-6">
               {bagItems.map((item) => (
-                <div key={`${item.id}-${item.selectedSize || "default"}`} className="flex gap-4 border-b border-gray-50 pb-6">
+                <div
+                  key={`${item.id}-${item.selectedSize || "default"}`}
+                  className="flex gap-4 border-b border-gray-50 pb-6"
+                >
                   {/* Image */}
                   <div className="h-24 w-24 flex-shrink-0 overflow-hidden bg-gray-50 rounded-md">
                     <img
@@ -75,11 +91,17 @@ export default function BagDrawer({ isOpen, onClose, bagItems, onUpdateQuantity,
                           ${item.price * item.quantity}
                         </p>
                       </div>
-                      <p className="text-xs text-gray-500 mt-1">{item.category}</p>
+                      <p className="text-xs text-gray-500 mt-1">
+                        {item.category}
+                      </p>
                       {item.selectedSize && (
-                        <p className="text-xs text-gray-400 mt-0.5">Size: {item.selectedSize}</p>
+                        <p className="text-xs text-gray-400 mt-0.5">
+                          Size: {item.selectedSize}
+                        </p>
                       )}
-                      <p className="text-xs text-gray-400 mt-0.5">Color: {item.color}</p>
+                      <p className="text-xs text-gray-400 mt-0.5">
+                        Color: {item.color}
+                      </p>
                     </div>
 
                     {/* Quantity and Remove actions */}
@@ -87,7 +109,13 @@ export default function BagDrawer({ isOpen, onClose, bagItems, onUpdateQuantity,
                       {/* Quantity Selector */}
                       <div className="flex items-center border border-gray-200 rounded-full p-1 bg-gray-50">
                         <button
-                          onClick={() => onUpdateQuantity(item.id, item.selectedSize, item.quantity - 1)}
+                          onClick={() =>
+                            onUpdateQuantity(
+                              item.id,
+                              item.selectedSize,
+                              item.quantity - 1,
+                            )
+                          }
                           className="p-1 rounded-full text-gray-600 hover:bg-gray-200 hover:text-black transition-colors"
                           title="Decrease Quantity"
                         >
@@ -97,7 +125,13 @@ export default function BagDrawer({ isOpen, onClose, bagItems, onUpdateQuantity,
                           {item.quantity}
                         </span>
                         <button
-                          onClick={() => onUpdateQuantity(item.id, item.selectedSize, item.quantity + 1)}
+                          onClick={() =>
+                            onUpdateQuantity(
+                              item.id,
+                              item.selectedSize,
+                              item.quantity + 1,
+                            )
+                          }
                           className="p-1 rounded-full text-gray-600 hover:bg-gray-200 hover:text-black transition-colors"
                           title="Increase Quantity"
                         >
@@ -127,7 +161,9 @@ export default function BagDrawer({ isOpen, onClose, bagItems, onUpdateQuantity,
             <div className="space-y-1.5">
               <div className="flex justify-between text-sm text-gray-500">
                 <span>Subtotal</span>
-                <span className="font-semibold text-black">${subtotal.toFixed(2)}</span>
+                <span className="font-semibold text-black">
+                  ${subtotal.toFixed(2)}
+                </span>
               </div>
               <div className="flex justify-between text-sm text-gray-500">
                 <span>Estimated Shipping & Handling</span>
@@ -145,7 +181,9 @@ export default function BagDrawer({ isOpen, onClose, bagItems, onUpdateQuantity,
 
             <div className="grid grid-cols-1 gap-2 pt-2">
               <button
-                onClick={() => alert("Checkout initiated! Total: $" + subtotal.toFixed(2))}
+                onClick={() =>
+                  alert("Checkout initiated! Total: $" + subtotal.toFixed(2))
+                }
                 className="w-full flex items-center justify-center gap-2 py-4 px-6 bg-black text-white hover:bg-zinc-800 rounded-full font-semibold transition-colors"
               >
                 Checkout

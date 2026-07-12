@@ -14,7 +14,11 @@ import {
   Trending,
 } from "../components";
 
-export default function LandingPage({ onAddToBag, onToggleWishlist, wishlist }) {
+export default function LandingPage({
+  onAddToBag,
+  onToggleWishlist,
+  wishlist,
+}) {
   return (
     <>
       {/* Hero Showcase Section */}

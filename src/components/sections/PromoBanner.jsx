@@ -26,7 +26,8 @@ export default function PromoBanner() {
               SWEAT. PROOF.
             </h2>
             <p className="text-sm md:text-base text-zinc-100 max-w-lg leading-relaxed drop-shadow-sm font-medium">
-              Show the work, not the sweat in Nike<br />
+              Show the work, not the sweat in Nike
+              <br />
               Universa with Stealth Evaporation.
             </p>
             <div className="pt-2">

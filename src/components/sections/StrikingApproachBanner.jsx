@@ -6,9 +6,9 @@ export default function StrikingApproachBanner() {
       <div className="w-full flex flex-col items-center">
         {/* Cross/Plus Logo */}
         <div className="flex justify-center mb-6">
-          <img 
-            src="/assets/banners/banners_img_8.png" 
-            alt="NikeCourt Logo" 
+          <img
+            src="/assets/banners/banners_img_8.png"
+            alt="NikeCourt Logo"
             className="h-16 md:h-20 w-auto object-contain"
           />
         </div>

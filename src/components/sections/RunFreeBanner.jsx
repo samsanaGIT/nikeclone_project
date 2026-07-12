@@ -17,11 +17,12 @@ export default function RunFreeBanner() {
         />
         {/* Gradient overlay on the bottom left for text readability */}
         <div className="absolute inset-0 bg-gradient-to-tr from-black/50 via-transparent to-transparent pointer-events-none" />
-        
+
         {/* Text overlay on the left side */}
         <div className="absolute bottom-6 left-5 md:bottom-8 md:left-8 z-10 text-white space-y-1.5">
           <p className="text-xs md:text-sm text-zinc-100 max-w-[260px] leading-relaxed font-medium drop-shadow-sm">
-            Play outside the lines with Nike Free Ride's flexible innovation, now in fresh new colors.
+            Play outside the lines with Nike Free Ride's flexible innovation,
+            now in fresh new colors.
           </p>
           <div>
             <a

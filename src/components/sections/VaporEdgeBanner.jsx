@@ -25,7 +25,8 @@ export default function VaporEdgeBanner() {
             {/* Text overlay */}
             <div className="absolute bottom-6 left-5 md:left-6 z-10 text-white space-y-1.5">
               <p className="text-xs md:text-sm text-zinc-100 max-w-[260px] leading-relaxed font-medium drop-shadow-sm">
-                The cleat that took the world by storm, modernized with our signature innovations.
+                The cleat that took the world by storm, modernized with our
+                signature innovations.
               </p>
               <div>
                 <a

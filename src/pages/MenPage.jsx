@@ -1,6 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MenHeroCarousel, MenFeaturedCategories, MenTrendingNow, MenFeaturedFootwear, MenShopBySport, MenLatestClothing, MenShopByCategory } from "../components";
+import {
+  MenHeroCarousel,
+  MenFeaturedCategories,
+  MenTrendingNow,
+  MenFeaturedFootwear,
+  MenShopBySport,
+  MenLatestClothing,
+  MenShopByCategory,
+} from "../components";
 
 export default function MenPage() {
   const secondaryNavLinks = [

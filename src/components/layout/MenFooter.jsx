@@ -7,46 +7,76 @@ export default function MenFooter() {
   const toggleAccordion = (section) => {
     setOpenAccordions((prev) => ({
       ...prev,
-      [section]: !prev[section]
+      [section]: !prev[section],
     }));
   };
 
   const firstGrid = [
     {
       title: "Men's Shoes",
-      links: ["Running", "Basketball", "Golf", "Tennis Shoes"]
+      links: ["Running", "Basketball", "Golf", "Tennis Shoes"],
     },
     {
       title: "Men's Clothing",
-      links: ["Tops & T-Shirts", "Jackets", "Hoodies", "Pants"]
+      links: ["Tops & T-Shirts", "Jackets", "Hoodies", "Pants"],
     },
     {
       title: "Men's Gear",
-      links: ["All Men's Gear", "Socks", "Bags & Backpacks", "Balls"]
+      links: ["All Men's Gear", "Socks", "Bags & Backpacks", "Balls"],
     },
     {
       title: "Featured",
-      links: ["New Releases", "Sale", "NFL", "Men's Essentials"]
-    }
+      links: ["New Releases", "Sale", "NFL", "Men's Essentials"],
+    },
   ];
 
   const secondGrid = [
     {
       title: "Resources",
-      links: ["Gift Cards", "Corporate Sales", "Find a Store", "Membership", "Nike Journal", "Site Feedback"]
+      links: [
+        "Gift Cards",
+        "Corporate Sales",
+        "Find a Store",
+        "Membership",
+        "Nike Journal",
+        "Site Feedback",
+      ],
     },
     {
       title: "Help",
-      links: ["Get Help", "Order Status", "Shipping and Delivery", "Returns", "Order Cancellation", "Payment Options", "Gift Card Balance", "Contact Us"]
+      links: [
+        "Get Help",
+        "Order Status",
+        "Shipping and Delivery",
+        "Returns",
+        "Order Cancellation",
+        "Payment Options",
+        "Gift Card Balance",
+        "Contact Us",
+      ],
     },
     {
       title: "Company",
-      links: ["About Nike", "News", "Careers", "Investors", "Purpose", "Sustainability", "Accessibility"]
+      links: [
+        "About Nike",
+        "News",
+        "Careers",
+        "Investors",
+        "Purpose",
+        "Sustainability",
+        "Accessibility",
+      ],
     },
     {
       title: "Promotions & Discounts",
-      links: ["Student", "Military", "Teacher", "First Responders & Medical Professionals", "Birthday"]
-    }
+      links: [
+        "Student",
+        "Military",
+        "Teacher",
+        "First Responders & Medical Professionals",
+        "Birthday",
+      ],
+    },
   ];
 
   return (
@@ -58,13 +88,20 @@ export default function MenFooter() {
           {firstGrid.map((group) => {
             const isOpen = !!openAccordions[group.title];
             return (
-              <div key={group.title} className="border-b border-gray-100 md:border-b-0 pb-4 md:pb-0">
+              <div
+                key={group.title}
+                className="border-b border-gray-100 md:border-b-0 pb-4 md:pb-0"
+              >
                 <button
                   onClick={() => toggleAccordion(group.title)}
                   className="w-full md:hidden flex items-center justify-between py-2 text-left font-semibold text-sm text-black"
                 >
                   <span>{group.title}</span>
-                  {isOpen ? <Minus className="h-3.5 w-3.5 text-zinc-500" /> : <Plus className="h-3.5 w-3.5 text-zinc-500" />}
+                  {isOpen ? (
+                    <Minus className="h-3.5 w-3.5 text-zinc-500" />
+                  ) : (
+                    <Plus className="h-3.5 w-3.5 text-zinc-500" />
+                  )}
                 </button>
                 <h3 className="hidden md:block font-semibold text-sm text-black mb-4">
                   {group.title}
@@ -76,7 +113,10 @@ export default function MenFooter() {
                 >
                   {group.links.map((link) => (
                     <li key={link}>
-                      <a href={`#${link.toLowerCase().replace(/[^a-z0-9]/g, "-")}`} className="hover:text-black transition-colors">
+                      <a
+                        href={`#${link.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
+                        className="hover:text-black transition-colors"
+                      >
                         {link}
                       </a>
                     </li>
@@ -92,14 +132,21 @@ export default function MenFooter() {
           {secondGrid.map((group) => {
             const isOpen = !!openAccordions[group.title];
             return (
-              <div key={group.title} className="border-b border-gray-100 md:border-b-0 pb-4 md:pb-0">
+              <div
+                key={group.title}
+                className="border-b border-gray-100 md:border-b-0 pb-4 md:pb-0"
+              >
                 {/* Mobile Accordion Header */}
                 <button
                   onClick={() => toggleAccordion(group.title)}
                   className="w-full md:hidden flex items-center justify-between py-2 text-left font-semibold text-sm text-black"
                 >
                   <span>{group.title}</span>
-                  {isOpen ? <Minus className="h-3.5 w-3.5 text-zinc-500" /> : <Plus className="h-3.5 w-3.5 text-zinc-500" />}
+                  {isOpen ? (
+                    <Minus className="h-3.5 w-3.5 text-zinc-500" />
+                  ) : (
+                    <Plus className="h-3.5 w-3.5 text-zinc-500" />
+                  )}
                 </button>
 
                 {/* Desktop Header */}
@@ -115,7 +162,10 @@ export default function MenFooter() {
                 >
                   {group.links.map((link) => (
                     <li key={link}>
-                      <a href={`#${link.toLowerCase().replace(/[^a-z0-9]/g, "-")}`} className="hover:text-black transition-colors">
+                      <a
+                        href={`#${link.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
+                        className="hover:text-black transition-colors"
+                      >
                         {link}
                       </a>
                     </li>
@@ -136,8 +186,10 @@ export default function MenFooter() {
 
         {/* Legal Links & Copyright */}
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-gray-100 pt-8 text-[11px] font-normal text-zinc-400">
-          <span className="text-zinc-500 font-medium">© 2026 Nike, Inc. All Rights Reserved</span>
-          
+          <span className="text-zinc-500 font-medium">
+            © 2026 Nike, Inc. All Rights Reserved
+          </span>
+
           <div className="relative group">
             <button className="hover:text-black transition-colors flex items-center gap-0.5">
               <span>Guides</span>
@@ -145,16 +197,34 @@ export default function MenFooter() {
             </button>
           </div>
 
-          <a href="#terms-sale" className="hover:text-black transition-colors">Terms of Sale</a>
-          <a href="#terms-use" className="hover:text-black transition-colors">Terms of Use</a>
-          <a href="#privacy" className="hover:text-black transition-colors">Nike Privacy Policy</a>
-          <a href="#privacy-choices" className="hover:text-black flex items-center gap-1 transition-colors">
+          <a href="#terms-sale" className="hover:text-black transition-colors">
+            Terms of Sale
+          </a>
+          <a href="#terms-use" className="hover:text-black transition-colors">
+            Terms of Use
+          </a>
+          <a href="#privacy" className="hover:text-black transition-colors">
+            Nike Privacy Policy
+          </a>
+          <a
+            href="#privacy-choices"
+            className="hover:text-black flex items-center gap-1 transition-colors"
+          >
             <span className="inline-flex items-center">
-              <img src="/assets/icons/icons_img_1.png" alt="Privacy Choices Icon" className="h-6 w-auto mr-1" />
+              <img
+                src="/assets/icons/icons_img_1.png"
+                alt="Privacy Choices Icon"
+                className="h-6 w-auto mr-1"
+              />
               <span>Your Privacy Choices</span>
             </span>
           </a>
-          <a href="#ca-supply-chains" className="hover:text-black transition-colors">CA Supply Chains Act</a>
+          <a
+            href="#ca-supply-chains"
+            className="hover:text-black transition-colors"
+          >
+            CA Supply Chains Act
+          </a>
         </div>
       </div>
     </footer>

@@ -27,7 +27,8 @@ export default function Trending({ onAddToBag }) {
             TRENDING
           </h2>
           <p className="text-xs md:text-sm text-zinc-600 font-medium max-w-xl mx-auto tracking-normal leading-relaxed">
-            Classic silhouettes and cutting-edge innovation to build your game from the ground up.
+            Classic silhouettes and cutting-edge innovation to build your game
+            from the ground up.
           </p>
         </div>
 

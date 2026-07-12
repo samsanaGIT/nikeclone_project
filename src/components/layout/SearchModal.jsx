@@ -3,7 +3,13 @@ import { X, Sparkles } from "lucide-react";
 import { Swoosh, SearchIcon, HeartIcon, BagIcon } from "../common/BrandIcons";
 import { trendingProducts } from "../../data/products";
 
-export default function SearchModal({ isOpen, onClose, onAddToBag, onToggleWishlist, wishlist }) {
+export default function SearchModal({
+  isOpen,
+  onClose,
+  onAddToBag,
+  onToggleWishlist,
+  wishlist,
+}) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const inputRef = useRef(null);
@@ -23,9 +29,10 @@ export default function SearchModal({ isOpen, onClose, onAddToBag, onToggleWishl
     if (query.trim() === "") {
       setResults([]);
     } else {
-      const filtered = trendingProducts.filter((p) =>
-        p.name.toLowerCase().includes(query.toLowerCase()) ||
-        p.category.toLowerCase().includes(query.toLowerCase())
+      const filtered = trendingProducts.filter(
+        (p) =>
+          p.name.toLowerCase().includes(query.toLowerCase()) ||
+          p.category.toLowerCase().includes(query.toLowerCase()),
       );
       setResults(filtered);
     }
@@ -33,7 +40,14 @@ export default function SearchModal({ isOpen, onClose, onAddToBag, onToggleWishl
 
   if (!isOpen) return null;
 
-  const popularSearches = ["Jordan", "Air Max", "Vomero", "Pegasus", "Sabrina", "Fleece"];
+  const popularSearches = [
+    "Jordan",
+    "Air Max",
+    "Vomero",
+    "Pegasus",
+    "Sabrina",
+    "Fleece",
+  ];
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-white transition-all duration-300">
@@ -79,7 +93,9 @@ export default function SearchModal({ isOpen, onClose, onAddToBag, onToggleWishl
                 <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-b from-[#C4F627] to-[#88EC0C] shadow-sm">
                   <Sparkles className="h-5 w-5 text-black fill-black" />
                 </div>
-                <span className="text-base font-medium text-black">Ask NikeAI</span>
+                <span className="text-base font-medium text-black">
+                  Ask NikeAI
+                </span>
               </button>
 
               {/* Popular Search Terms */}
@@ -96,7 +112,7 @@ export default function SearchModal({ isOpen, onClose, onAddToBag, onToggleWishl
                     "basketball shoes",
                     "jordan 4",
                     "soccer cleats",
-                    "nike mind"
+                    "nike mind",
                   ].map((term) => (
                     <button
                       key={term}
@@ -128,7 +144,8 @@ export default function SearchModal({ isOpen, onClose, onAddToBag, onToggleWishl
               {results.length === 0 ? (
                 <div className="text-center py-20">
                   <p className="text-lg text-gray-500">
-                    No results found for "<span className="font-semibold text-black">{query}</span>"
+                    No results found for "
+                    <span className="font-semibold text-black">{query}</span>"
                   </p>
                   <p className="text-sm text-gray-400 mt-2">
                     Try searching for another style, name, or product category.
@@ -166,13 +183,17 @@ export default function SearchModal({ isOpen, onClose, onAddToBag, onToggleWishl
                               onToggleWishlist(product.id);
                             }}
                             className={`p-2 bg-white rounded-full shadow-sm transition-colors ${
-                              wishlist.includes(product.id) ? "text-red-500" : "text-black hover:text-red-500"
+                              wishlist.includes(product.id)
+                                ? "text-red-500"
+                                : "text-black hover:text-red-500"
                             }`}
                             title="Add to Wishlist"
                           >
                             <HeartIcon
                               className={`h-4 w-4 ${
-                                wishlist.includes(product.id) ? "fill-red-500" : ""
+                                wishlist.includes(product.id)
+                                  ? "fill-red-500"
+                                  : ""
                               }`}
                             />
                           </button>
@@ -185,8 +206,12 @@ export default function SearchModal({ isOpen, onClose, onAddToBag, onToggleWishl
                           <h4 className="font-semibold text-sm text-black leading-tight">
                             {product.name}
                           </h4>
-                          <p className="text-xs text-gray-500 mt-0.5">{product.category}</p>
-                          <p className="text-xs text-gray-400">{product.color}</p>
+                          <p className="text-xs text-gray-500 mt-0.5">
+                            {product.category}
+                          </p>
+                          <p className="text-xs text-gray-400">
+                            {product.color}
+                          </p>
                         </div>
                         <p className="font-semibold text-sm text-black mt-2">
                           ${product.price}
