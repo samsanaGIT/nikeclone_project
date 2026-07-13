@@ -21,11 +21,30 @@ Since this is a frontend UI practice project, many backend and full-site feature
 - **No Product Detail Pages**: Clicking on a shoe in the carousels does not take you to a dedicated product page.
 - **Missing Pages**: I only focused on cloning the Main Landing page, the Men's page, and the Responsive Cushioning page. Other categories (Women, Kids, Sale, Custom) are completely ignored.
 
-## What I Learned & Used
-- **React**: For building the user interface and components.
-- **Vite**: To run and build the project quickly.
-- **Tailwind CSS**: To style everything and make it look like the real Nike site.
-- **Responsive Design**: Making sure the site looks good on both phones and computer screens.
+## 🛠️ Tech Stack & Tools
+- **Frontend Library**: React 19 (Hooks, Context API)
+- **Routing**: React Router v7 (for smooth page transitions)
+- **Styling**: Tailwind CSS v4 (configured via `@tailwindcss/vite` plugin)
+- **Icons**: Lucide React
+- **Build Tool**: Vite 8 (Hot Module Replacement)
+- **Linter**: Oxlint (Rust-based fast linting)
+
+## 📂 Project Structure
+Here is how the project files are structured:
+```text
+src/
+├── assets/          # Brand logos, hero images, and static graphics
+├── components/      
+│   ├── common/      # Reusable UI elements (Buttons, Cards, etc.)
+│   ├── layout/      # Global Layout, Navbar, and Footer
+│   └── sections/    # Page-specific content modules
+├── data/            # Mock product database (products.js)
+├── pages/           # LandingPage, MenPage, and ResponsiveCushioningPage
+├── App.css          # App-wide specific layout overrides
+├── App.jsx          # React Router configuration and root routes
+├── index.css        # Core Tailwind stylesheet import
+└── main.jsx         # Application mounting and entry point
+```
 
 ## How to Run This Project
 1. Clone the repository:
