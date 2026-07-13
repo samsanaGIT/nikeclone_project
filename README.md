@@ -21,7 +21,7 @@ Since this is a frontend UI practice project, many backend and full-site feature
 - **No Product Detail Pages**: Clicking on a shoe in the carousels does not take you to a dedicated product page.
 - **Missing Pages**: I only focused on cloning the Main Landing page, the Men's page, and the Responsive Cushioning page. Other categories (Women, Kids, Sale, Custom) are completely ignored.
 
-## 🛠️ Tech Stack & Tools
+## Tech Stack & Tools
 - **Frontend Library**: React 19 (Hooks, Context API)
 - **Routing**: React Router v7 (for smooth page transitions)
 - **Styling**: Tailwind CSS v4 (configured via `@tailwindcss/vite` plugin)
@@ -29,7 +29,7 @@ Since this is a frontend UI practice project, many backend and full-site feature
 - **Build Tool**: Vite 8 (Hot Module Replacement)
 - **Linter**: Oxlint (Rust-based fast linting)
 
-## 📂 Project Structure
+##  Project Structure
 Here is how the project files are structured:
 ```text
 src/
