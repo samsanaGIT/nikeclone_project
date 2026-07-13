@@ -9,9 +9,9 @@ export default function MenShopByCategory() {
       </div>
 
       {/* Grid Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-[600px] md:h-[700px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-auto">
         {/* Left Column - Clothing */}
-        <div className="relative w-full h-full group cursor-pointer overflow-hidden">
+        <div className="relative w-full aspect-[4/5] md:aspect-[4/5] group cursor-pointer overflow-hidden">
           <img
             src="/assets/categories/categories_img_1.png"
             alt="Clothing"
@@ -30,7 +30,7 @@ export default function MenShopByCategory() {
         {/* Right Column - Split vertically into two */}
         <div className="grid grid-rows-2 gap-4 h-full">
           {/* Top Right - Shoes */}
-          <div className="relative w-full h-full group cursor-pointer overflow-hidden">
+          <div className="relative w-full aspect-[16/9] md:aspect-auto group cursor-pointer overflow-hidden">
             <img
               src="/assets/categories/categories_img_2.png"
               alt="Shoes"
@@ -47,7 +47,7 @@ export default function MenShopByCategory() {
           </div>
 
           {/* Bottom Right - Accessories */}
-          <div className="relative w-full h-full group cursor-pointer overflow-hidden">
+          <div className="relative w-full aspect-[16/9] md:aspect-auto group cursor-pointer overflow-hidden">
             <img
               src="/assets/categories/categories_img_3.png"
               alt="Accessories"
