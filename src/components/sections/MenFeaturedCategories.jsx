@@ -26,7 +26,7 @@ export default function MenFeaturedCategories() {
           <a
             key={idx}
             href={cat.link}
-            className="relative flex-none w-[85%] md:w-auto aspect-[4/3] snap-start group overflow-hidden bg-gray-100"
+            className="relative flex-none w-[85%] md:w-auto aspect-[3/2] snap-start group overflow-hidden bg-gray-100"
           >
             {/* Image */}
             <img
