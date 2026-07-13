@@ -3,7 +3,7 @@ import React from "react";
 export default function KDBanner() {
   return (
     <section className="w-full bg-white py-12 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
+      <div className="w-full flex flex-col items-center">
         {/* KD Logo */}
         <div className="flex justify-center mb-6">
           <img

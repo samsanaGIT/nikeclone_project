@@ -4,7 +4,7 @@ import { categoryCards } from "../../data/products";
 export default function CategoryGrid() {
   return (
     <section className="w-full py-12 px-6 md:px-12 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         {/* 3-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {categoryCards.map((card) => (
@@ -14,7 +14,7 @@ export default function CategoryGrid() {
               className="group flex flex-col w-full text-left cursor-pointer"
             >
               {/* Image Frame */}
-              <div className="aspect-square w-full overflow-hidden bg-zinc-50">
+              <div className="aspect-[3/4] w-full overflow-hidden bg-zinc-50">
                 <img
                   src={card.image}
                   alt={card.title}

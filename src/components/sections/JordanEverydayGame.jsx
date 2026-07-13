@@ -4,7 +4,7 @@ import { Jumpman } from "../common/BrandIcons";
 export default function JordanEverydayGame() {
   return (
     <section className="w-full px-6 md:px-12 py-12 md:py-20 bg-white">
-      <div className="max-w-[1440px] mx-auto">
+      <div className="w-full">
         {/* Header - Jumpman Logo */}
         <div className="flex justify-center mb-12">
           <Jumpman className="h-10 w-10 text-black" />

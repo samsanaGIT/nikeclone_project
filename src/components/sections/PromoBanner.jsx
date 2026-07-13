@@ -4,7 +4,7 @@ import { Swoosh } from "../common/BrandIcons";
 export default function PromoBanner() {
   return (
     <section className="w-full bg-white py-12 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
+      <div className="w-full flex flex-col items-center">
         {/* Top Centered Swoosh */}
         <div className="mb-8 flex justify-center text-black" title="Nike">
           <Swoosh className="h-8 w-auto text-black hover:scale-105 transition-transform cursor-pointer" />

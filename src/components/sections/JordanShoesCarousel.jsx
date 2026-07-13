@@ -11,7 +11,7 @@ export default function JordanShoesCarousel() {
 
   return (
     <section className="w-full bg-white py-4 px-6 md:px-12 mb-12">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
+      <div className="w-full flex flex-col items-center">
         {/* 4-Shoe Grid - No titles, just images */}
         <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           {shoes.map((src, idx) => (
