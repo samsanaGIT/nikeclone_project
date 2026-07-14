@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronRight } from "lucide-react";
-import {
-  Swoosh,
-  Jumpman,
-  Converse,
-  SearchIcon,
-  HeartIcon,
-  BagIcon,
-} from "../common/BrandIcons";
+import { Swoosh, Jumpman, Converse, SearchIcon, HeartIcon, BagIcon } from "../common/BrandIcons";
 
 export default function Header({
   wishlistCount,
@@ -16,7 +9,7 @@ export default function Header({
   onOpenSearch,
   onOpenBag,
   mobileMenuOpen,
-  setMobileMenuOpen,
+  setMobileMenuOpen
 }) {
   const [isSticky, setIsSticky] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -33,15 +26,7 @@ export default function Header({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    "Men",
-    "Women",
-    "Kids",
-    "Jordan",
-    "NikeSKIMS",
-    "Back to School",
-    "Nike Soccer",
-  ];
+  const navLinks = ["Men", "Women", "Kids", "Jordan", "NikeSKIMS", "Back to School", "Nike Soccer"];
 
   // Mega dropdown menu data for all navigation sections
   const dropdownData = {
@@ -52,9 +37,9 @@ export default function Header({
         "Latest Drops",
         "Back to School Shop",
         "SNKRS Launch Calendar",
-        "Shop All Sale",
+        "Shop All Sale"
       ],
-      Shoes: [
+      "Shoes": [
         "All Shoes",
         "Basketball",
         "Jordan",
@@ -63,23 +48,23 @@ export default function Header({
         "Sandals & Slides",
         "Soccer",
         "Training & Gym",
-        "Custom Shoes",
+        "Custom Shoes"
       ],
-      Clothing: [
+      "Clothing": [
         "All Clothing",
         "Jackets & Vests",
         "Pants",
         "Shorts",
         "Sweats & Sweatshirts",
         "Swim",
-        "Tops & Graphic Tees",
+        "Tops & Graphic Tees"
       ],
-      Accessories: [
+      "Accessories": [
         "All Accessories",
         "Bags & Backpacks",
         "Hats & Headwear",
         "Socks",
-        "Sunglasses",
+        "Sunglasses"
       ],
       "Shop By Sport": [
         "All Conditions Gear",
@@ -92,8 +77,8 @@ export default function Header({
         "Skateboarding",
         "Soccer",
         "Tennis",
-        "Training",
-      ],
+        "Training"
+      ]
     },
     Women: {
       "New & Featured": [
@@ -101,39 +86,39 @@ export default function Header({
         "Best Sellers",
         "Latest Drops",
         "Back to School Shop",
-        "Shop All Sale",
+        "Shop All Sale"
       ],
-      Shoes: [
+      "Shoes": [
         "All Shoes",
         "Lifestyle",
         "Running",
         "Training & Gym",
         "Jordan",
         "Sandals & Slides",
-        "Soccer",
+        "Soccer"
       ],
-      Clothing: [
+      "Clothing": [
         "All Clothing",
         "Bras & Tights",
         "Jackets & Vests",
         "Pants & Leggings",
         "Shorts",
         "Sweats & Sweatshirts",
-        "Tops & Graphic Tees",
+        "Tops & Graphic Tees"
       ],
-      Accessories: [
+      "Accessories": [
         "All Accessories",
         "Bags & Backpacks",
         "Hats & Headwear",
-        "Socks",
+        "Socks"
       ],
       "Shop By Sport": [
         "Running",
         "Training & Gym",
         "Yoga",
         "Soccer",
-        "Tennis",
-      ],
+        "Tennis"
+      ]
     },
     Kids: {
       "Get Set for School": [
@@ -145,9 +130,9 @@ export default function Header({
         "Bags & Backpacks",
         "Nike x LEGO®",
         "Teens",
-        "Shop All Sale",
+        "Shop All Sale"
       ],
-      Shoes: [
+      "Shoes": [
         "All Shoes",
         "Big Kids (7-15 yrs)",
         "Little Kids (3-7 yrs)",
@@ -157,9 +142,9 @@ export default function Header({
         "Lifestyle",
         "Running",
         "Sandals & Slides",
-        "Soccer",
+        "Soccer"
       ],
-      Clothing: [
+      "Clothing": [
         "All Clothing",
         "Big Kids (7-15 yrs)",
         "Little Kids (3-7 yrs)",
@@ -171,13 +156,13 @@ export default function Header({
         "Skirts & Dresses",
         "Sweats & Sweatshirts",
         "Swim",
-        "Tops & Graphic Tees",
+        "Tops & Graphic Tees"
       ],
-      Accessories: [
+      "Accessories": [
         "All Accessories",
         "Bags & Backpacks",
         "Hats & Headwear",
-        "Socks",
+        "Socks"
       ],
       "Shop By Sport": [
         "Basketball",
@@ -185,8 +170,8 @@ export default function Header({
         "Fan Gear",
         "Football",
         "Running",
-        "Soccer",
-      ],
+        "Soccer"
+      ]
     },
     Jordan: {
       "New & Featured": [
@@ -194,29 +179,53 @@ export default function Header({
         "Best Sellers",
         "Heat Check",
         "Back to School Shop",
-        "Shop All Sale",
+        "Shop All Sale"
       ],
-      Men: ["Shop All", "Shoes", "AJ1", "Clothing", "Accessories"],
-      Women: ["Shop All", "Shoes", "AJ1", "Clothing", "Accessories"],
-      Kids: ["Shop All", "Shoes", "AJ1", "Clothing", "Accessories"],
-      Sport: ["Basketball", "Golf", "Cleats"],
+      "Men": [
+        "Shop All",
+        "Shoes",
+        "AJ1",
+        "Clothing",
+        "Accessories"
+      ],
+      "Women": [
+        "Shop All",
+        "Shoes",
+        "AJ1",
+        "Clothing",
+        "Accessories"
+      ],
+      "Kids": [
+        "Shop All",
+        "Shoes",
+        "AJ1",
+        "Clothing",
+        "Accessories"
+      ],
+      "Sport": [
+        "Basketball",
+        "Golf",
+        "Cleats"
+      ]
     },
     NikeSKIMS: {
-      "All Shoes": ["NikeSKIMS Rift"],
+      "All Shoes": [
+        "NikeSKIMS Rift"
+      ],
       "All Clothing": [
         "Bras",
         "Jackets",
         "Leggings",
         "Shorts",
         "Tops and Tanks",
-        "Accessories",
+        "Accessories"
       ],
       "Shop by Color": [
         "Dark Sepia",
         "Ditsy Floral",
         "Ivory",
         "Obsidian",
-        "Phoenix",
+        "Phoenix"
       ],
       "Shop by Material": [
         "Shine",
@@ -224,14 +233,14 @@ export default function Header({
         "Airy",
         "Seamless",
         "Stretch Knit",
-        "Studio Stretch",
+        "Studio Stretch"
       ],
       "NikeSKIMS Guides": [
         "NikeSKIMS Lookbook",
         "NikeSKIMS Bra Guide",
-        "NikeSKIMS Fabric Guide",
-      ],
-    },
+        "NikeSKIMS Fabric Guide"
+      ]
+    }
   };
 
   return (
@@ -244,30 +253,20 @@ export default function Header({
             <Converse className="h-3.5 w-auto text-zinc-800 hover:text-black transition-colors cursor-pointer" />
           </div>
           <div className="flex items-center space-x-4 font-medium text-[11px] text-zinc-700">
-            <a href="#store" className="hover:text-black transition-colors">
-              Find a Store
-            </a>
+            <a href="#store" className="hover:text-black transition-colors">Find a Store</a>
             <span className="text-zinc-300">|</span>
-            <a href="#help" className="hover:text-black transition-colors">
-              Help
-            </a>
+            <a href="#help" className="hover:text-black transition-colors">Help</a>
             <span className="text-zinc-300">|</span>
-            <a href="#join" className="hover:text-black transition-colors">
-              Join Us
-            </a>
+            <a href="#join" className="hover:text-black transition-colors">Join Us</a>
             <span className="text-zinc-300">|</span>
-            <a href="#signin" className="hover:text-black transition-colors">
-              Sign In
-            </a>
+            <a href="#signin" className="hover:text-black transition-colors">Sign In</a>
           </div>
         </div>
 
         {/* Main Navigation Bar */}
         <div
           className={`w-full bg-white px-6 md:px-12 py-3.5 flex items-center justify-between border-b border-gray-100 transition-all duration-300 ${
-            isSticky
-              ? "fixed top-0 left-0 right-0 shadow-xs border-b-zinc-200 z-40"
-              : "relative z-40"
+            isSticky ? "fixed top-0 left-0 right-0 shadow-xs border-b-zinc-200 z-40" : "relative z-40"
           }`}
         >
           {/* Logo (Left) */}
@@ -276,8 +275,8 @@ export default function Header({
           </Link>
 
           {/* Desktop Nav Links (Center) */}
-          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 font-semibold text-sm tracking-wide text-zinc-900 ml-12">
-            {navLinks.map((link) =>
+          <nav className="hidden lg:flex items-center space-x-6 lg:space-x-8 font-semibold text-sm tracking-wide text-zinc-900 ml-12">
+            {navLinks.map((link) => (
               link === "Men" ? (
                 <Link
                   key={link}
@@ -287,13 +286,9 @@ export default function Header({
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   {link}
-                  <span
-                    className={`absolute bottom-0 left-0 h-0.5 bg-black transition-all ${
-                      activeDropdown === link
-                        ? "w-full"
-                        : "w-0 group-hover:w-full"
-                    }`}
-                  />
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-black transition-all ${
+                    activeDropdown === link ? "w-full" : "w-0 group-hover:w-full"
+                  }`} />
                 </Link>
               ) : (
                 <a
@@ -304,16 +299,12 @@ export default function Header({
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   {link}
-                  <span
-                    className={`absolute bottom-0 left-0 h-0.5 bg-black transition-all ${
-                      activeDropdown === link
-                        ? "w-full"
-                        : "w-0 group-hover:w-full"
-                    }`}
-                  />
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-black transition-all ${
+                    activeDropdown === link ? "w-full" : "w-0 group-hover:w-full"
+                  }`} />
                 </a>
-              ),
-            )}
+              )
+            ))}
           </nav>
 
           {/* Nav Actions (Right) */}
@@ -321,18 +312,16 @@ export default function Header({
             {/* Search Bar Input */}
             <div
               onClick={onOpenSearch}
-              className="hidden md:flex items-center bg-zinc-100 hover:bg-zinc-200/80 rounded-full px-4 py-2 cursor-pointer transition-colors w-44 lg:w-56"
+              className="hidden lg:flex items-center bg-zinc-100 hover:bg-zinc-200/80 rounded-full px-4 py-2 cursor-pointer transition-colors w-44 lg:w-56"
             >
               <SearchIcon className="h-4 w-4 text-zinc-500 mr-2 flex-shrink-0" />
-              <span className="text-xs text-zinc-400 font-medium select-none">
-                Search
-              </span>
+              <span className="text-xs text-zinc-400 font-medium select-none">Search</span>
             </div>
 
             {/* Mobile Search Icon Button */}
             <button
               onClick={onOpenSearch}
-              className="md:hidden p-2 rounded-full hover:bg-gray-100 transition-colors text-black"
+              className="lg:hidden p-2 rounded-full hover:bg-gray-100 transition-colors text-black"
               title="Search"
             >
               <SearchIcon className="h-5.5 w-5.5" />
@@ -357,7 +346,7 @@ export default function Header({
             {/* Hamburger Button (Mobile Only) */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="md:hidden p-2 rounded-full hover:bg-gray-100 text-black transition-colors"
+              className="lg:hidden p-2 rounded-full hover:bg-gray-100 text-black transition-colors"
               title="Open Menu"
             >
               <Menu className="h-5.5 w-5.5" />
@@ -372,27 +361,25 @@ export default function Header({
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <div className="max-w-7xl mx-auto grid grid-cols-5 gap-6 text-left">
-                {Object.entries(dropdownData[activeDropdown]).map(
-                  ([category, items]) => (
-                    <div key={category} className="space-y-3.5">
-                      <h3 className="font-bold text-xs uppercase tracking-wider text-black select-none">
-                        {category}
-                      </h3>
-                      <ul className="space-y-2 text-[11px] font-semibold text-zinc-500">
-                        {items.map((item) => (
-                          <li key={item}>
-                            <a
-                              href={`#${item.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
-                              className="hover:text-black transition-colors block py-0.5"
-                            >
-                              {item}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ),
-                )}
+                {Object.entries(dropdownData[activeDropdown]).map(([category, items]) => (
+                  <div key={category} className="space-y-3.5">
+                    <h3 className="font-bold text-xs uppercase tracking-wider text-black select-none">
+                      {category}
+                    </h3>
+                    <ul className="space-y-2 text-[11px] font-semibold text-zinc-500">
+                      {items.map((item) => (
+                        <li key={item}>
+                          <a
+                            href={`#${item.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
+                            className="hover:text-black transition-colors block py-0.5"
+                          >
+                            {item}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
           )}
@@ -412,16 +399,14 @@ export default function Header({
 
       {/* Slide-out Mobile Navigation Menu (Drawer) */}
       <div
-        className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-300 md:hidden ${
-          mobileMenuOpen
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
+        className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-300 lg:hidden ${
+          mobileMenuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={() => setMobileMenuOpen(false)}
       />
 
       <div
-        className={`fixed top-0 right-0 bottom-0 z-50 flex h-full w-[300px] flex-col bg-white shadow-2xl transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 right-0 bottom-0 z-50 flex h-full w-[300px] flex-col bg-white shadow-2xl transition-transform duration-300 lg:hidden ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -440,7 +425,7 @@ export default function Header({
         <div className="flex-1 overflow-y-auto py-6 px-6 space-y-6">
           {/* Main Links */}
           <nav className="flex flex-col space-y-4">
-            {navLinks.map((link) =>
+            {navLinks.map((link) => (
               link === "Men" ? (
                 <Link
                   key={link}
@@ -461,40 +446,24 @@ export default function Header({
                   {link}
                   <ChevronRight className="h-5 w-5 text-gray-400" />
                 </a>
-              ),
-            )}
+              )
+            ))}
           </nav>
 
           <hr className="border-gray-100" />
 
           {/* Sub Utility Links */}
           <div className="flex flex-col space-y-3.5 text-sm font-semibold text-zinc-600">
-            <a
-              href="#store"
-              onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-black"
-            >
+            <a href="#store" onClick={() => setMobileMenuOpen(false)} className="hover:text-black">
               Find a Store
             </a>
-            <a
-              href="#help"
-              onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-black"
-            >
+            <a href="#help" onClick={() => setMobileMenuOpen(false)} className="hover:text-black">
               Help
             </a>
-            <a
-              href="#join"
-              onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-black"
-            >
+            <a href="#join" onClick={() => setMobileMenuOpen(false)} className="hover:text-black">
               Join Us
             </a>
-            <a
-              href="#signin"
-              onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-black"
-            >
+            <a href="#signin" onClick={() => setMobileMenuOpen(false)} className="hover:text-black">
               Sign In
             </a>
           </div>

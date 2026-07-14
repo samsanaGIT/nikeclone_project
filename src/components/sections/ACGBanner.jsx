@@ -2,8 +2,8 @@ import React from "react";
 
 export default function ACGBanner() {
   return (
-    <section className="w-full bg-white py-12 px-6 md:px-12">
-      <div className="w-full flex flex-col items-center">
+    <section className="w-full bg-white py-12">
+      <div className="w-[74vw] mx-auto flex flex-col items-center">
         {/* ACG Logo */}
         <div className="mb-10 flex justify-center">
           <img
@@ -14,7 +14,7 @@ export default function ACGBanner() {
         </div>
 
         {/* Three-Column Photo Grid */}
-        <div className="relative w-full grid grid-cols-1 md:grid-cols-3 gap-0.5 overflow-hidden">
+        <div className="relative w-full grid grid-cols-1 md:grid-cols-3 gap-[14px] overflow-hidden">
           {/* Photo 1 — left column with text overlay */}
           <div className="relative aspect-[4/5] overflow-hidden group">
             <img

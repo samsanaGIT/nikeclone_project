@@ -2,16 +2,16 @@ import React from "react";
 
 export default function MenShopByCategory() {
   return (
-    <section className="w-full px-6 md:px-12 py-12 md:py-16 bg-white">
-      {/* Header */}
-      <div className="mb-6 md:mb-8">
+    <section className="w-full py-12 md:py-16 bg-white">
+      {/* Header with page padding */}
+      <div className="px-6 md:px-12 mb-6 md:mb-8">
         <h2 className="text-2xl font-medium text-black">Shop By Category</h2>
       </div>
 
-      {/* Grid Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-auto">
-        {/* Left Column - Clothing */}
-        <div className="relative w-full aspect-[4/5] md:aspect-[4/5] group cursor-pointer overflow-hidden">
+      {/* Full-bleed Grid Layout with 4px gap */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[4px] w-full">
+        {/* Left Column - Clothing with aspect-[4/3] */}
+        <div className="relative w-full aspect-[4/3] group cursor-pointer overflow-hidden bg-zinc-50">
           <img
             src="/assets/categories/categories_img_1.png"
             alt="Clothing"
@@ -27,10 +27,10 @@ export default function MenShopByCategory() {
           </div>
         </div>
 
-        {/* Right Column - Split vertically into two */}
-        <div className="grid grid-rows-2 gap-4 h-full">
+        {/* Right Column - Split vertically into two, matching left column's height */}
+        <div className="grid grid-rows-2 gap-[4px] h-full">
           {/* Top Right - Shoes */}
-          <div className="relative w-full aspect-[16/9] md:aspect-auto group cursor-pointer overflow-hidden">
+          <div className="relative w-full h-full group cursor-pointer overflow-hidden bg-zinc-50">
             <img
               src="/assets/categories/categories_img_2.png"
               alt="Shoes"
@@ -47,7 +47,7 @@ export default function MenShopByCategory() {
           </div>
 
           {/* Bottom Right - Accessories */}
-          <div className="relative w-full aspect-[16/9] md:aspect-auto group cursor-pointer overflow-hidden">
+          <div className="relative w-full h-full group cursor-pointer overflow-hidden bg-zinc-50">
             <img
               src="/assets/categories/categories_img_3.png"
               alt="Accessories"

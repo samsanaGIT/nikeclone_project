@@ -2,8 +2,8 @@ import React from "react";
 
 export default function VaporEdgeBanner() {
   return (
-    <section className="w-full bg-white py-12 px-6 md:px-12">
-      <div className="w-full flex flex-col items-center">
+    <section className="w-full bg-white py-12">
+      <div className="w-[74vw] mx-auto flex flex-col items-center">
         {/* Centered Heading */}
         <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-black text-center mb-8 leading-tight">
           NIKE VAPOR EDGE 360
@@ -24,9 +24,8 @@ export default function VaporEdgeBanner() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
             {/* Text overlay */}
             <div className="absolute bottom-6 left-5 md:left-6 z-10 text-white space-y-1.5">
-              <p className="text-xs md:text-sm text-zinc-100 max-w-[260px] leading-relaxed font-medium drop-shadow-sm">
-                The cleat that took the world by storm, modernized with our
-                signature innovations.
+              <p className="text-sm md:text-base text-zinc-100 max-w-[320px] leading-relaxed font-medium drop-shadow-sm">
+                The cleat that took the world by storm, modernized with our signature innovations.
               </p>
               <div>
                 <a

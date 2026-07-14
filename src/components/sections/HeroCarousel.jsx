@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 import { heroSlides } from "../../data/products";
 
@@ -7,34 +7,36 @@ export default function HeroCarousel() {
   const [isPlaying, setIsPlaying] = useState(true);
   const [progress, setProgress] = useState(0);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === 0 ? heroSlides.length - 1 : prev - 1));
-  };
+  }, []);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1));
-  };
+  }, []);
 
   // Reset progress on manual slide change
   useEffect(() => {
     setProgress(0);
   }, [currentSlide]);
 
-  // Autoplay linked to circular progress increment
+  // Autoplay linked to progress increment
   useEffect(() => {
     if (!isPlaying) return;
     const step = (50 / 7000) * 100;
     const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          nextSlide();
-          return 0;
-        }
-        return prev + step;
-      });
+      setProgress((prev) => prev + step);
     }, 50);
     return () => clearInterval(timer);
   }, [isPlaying]);
+
+  // Trigger slide transition when progress reaches 100%
+  useEffect(() => {
+    if (progress >= 100) {
+      nextSlide();
+      setProgress(0);
+    }
+  }, [progress, nextSlide]);
 
   return (
     <section className="relative w-full h-[60vh] md:h-[80vh] bg-zinc-150 overflow-hidden select-none">

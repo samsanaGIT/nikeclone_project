@@ -2,25 +2,24 @@ import React from "react";
 
 export default function KDBanner() {
   return (
-    <section className="w-full bg-white py-12 px-6 md:px-12">
-      <div className="w-full flex flex-col items-center">
-        {/* KD Logo */}
-        <div className="flex justify-center mb-6">
-          <img
-            src="/assets/banners/banners_img_7.png"
-            alt="KD Logo"
-            className="h-16 md:h-20 w-auto object-contain"
-          />
-        </div>
+    <section className="w-full bg-white py-12">
+      {/* KD Logo */}
+      <div className="flex justify-center mb-6">
+        <img 
+          src="/assets/banners/banners_img_7.png" 
+          alt="KD Logo" 
+          className="h-16 md:h-20 w-auto object-contain"
+        />
+      </div>
 
-        {/* Single Contained Banner Image */}
+      {/* Single Banner Image - Same width as 3-col grids */}
+      <div className="w-[74vw] mx-auto">
         <div className="relative w-full overflow-hidden group">
           <img
             src="/assets/banners/kd_shoe.png"
             alt="KD Basketball Shoe — Nothing Sweet About It"
             className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 ease-out"
           />
-          {/* Text overlay */}
           <div className="absolute bottom-6 left-6 z-10 text-white space-y-1.5">
             <h3 className="text-xl md:text-3xl font-black uppercase leading-tight tracking-tight drop-shadow-md">
               NOTHING

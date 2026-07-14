@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -9,30 +9,37 @@ export default function MenHeroCarousel() {
 
   const totalSlides = 2;
 
-  const prevSlide = () =>
+  const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-  const nextSlide = () =>
-    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+  }, [totalSlides]);
 
-  useEffect(() => setProgress(0), [currentSlide]);
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+  }, [totalSlides]);
+
+  useEffect(() => {
+    setProgress(0);
+  }, [currentSlide]);
 
   useEffect(() => {
     if (!isPlaying) return;
     const step = (50 / 7000) * 100;
     const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          nextSlide();
-          return 0;
-        }
-        return prev + step;
-      });
+      setProgress((prev) => prev + step);
     }, 50);
     return () => clearInterval(timer);
   }, [isPlaying]);
 
+  useEffect(() => {
+    if (progress >= 100) {
+      nextSlide();
+      setProgress(0);
+    }
+  }, [progress, nextSlide]);
+
   return (
     <section className="relative w-full h-[60vh] md:h-[85vh] min-h-[600px] overflow-hidden select-none bg-zinc-150">
+      
       {/* Slide 0: Tennis (Centered Layout) */}
       <div
         className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
@@ -46,7 +53,7 @@ export default function MenHeroCarousel() {
         />
         {/* Dark gradient from bottom for text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 pointer-events-none" />
-
+        
         {/* Text Overlay: Centered */}
         <div className="absolute inset-x-0 bottom-24 md:bottom-32 z-20 flex flex-col items-center justify-end text-center text-white pb-8">
           <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter drop-shadow-lg mb-3">
@@ -71,9 +78,7 @@ export default function MenHeroCarousel() {
                 key={idx}
                 onClick={() => setCurrentSlide(idx)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  idx === currentSlide
-                    ? "w-2 bg-white"
-                    : "w-2 bg-white/50 hover:bg-white/75"
+                  idx === currentSlide ? "w-2 bg-white" : "w-2 bg-white/50 hover:bg-white/75"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
@@ -121,9 +126,7 @@ export default function MenHeroCarousel() {
                 key={idx}
                 onClick={() => setCurrentSlide(idx)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  idx === currentSlide
-                    ? "w-8 bg-white"
-                    : "w-2 bg-white/50 hover:bg-white/75"
+                  idx === currentSlide ? "w-8 bg-white" : "w-2 bg-white/50 hover:bg-white/75"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
@@ -139,18 +142,8 @@ export default function MenHeroCarousel() {
           className="relative flex h-10 w-10 items-center justify-center rounded-full bg-black/40 hover:bg-black/60 text-white transition-colors cursor-pointer border border-white/10 backdrop-blur-sm"
           aria-label={isPlaying ? "Pause" : "Play"}
         >
-          <svg
-            className="absolute inset-0 w-full h-full transform -rotate-90"
-            viewBox="0 0 36 36"
-          >
-            <circle
-              cx="18"
-              cy="18"
-              r="16"
-              fill="none"
-              stroke="rgba(255, 255, 255, 0.1)"
-              strokeWidth="2"
-            />
+          <svg className="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+            <circle cx="18" cy="18" r="16" fill="none" stroke="rgba(255, 255, 255, 0.1)" strokeWidth="2" />
             <circle
               cx="18"
               cy="18"
