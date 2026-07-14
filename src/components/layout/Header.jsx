@@ -275,7 +275,7 @@ export default function Header({
           </Link>
 
           {/* Desktop Nav Links (Center) */}
-          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 font-semibold text-sm tracking-wide text-zinc-900 ml-12">
+          <nav className="hidden lg:flex items-center space-x-6 lg:space-x-8 font-semibold text-sm tracking-wide text-zinc-900 ml-12">
             {navLinks.map((link) => (
               link === "Men" ? (
                 <Link
@@ -312,7 +312,7 @@ export default function Header({
             {/* Search Bar Input */}
             <div
               onClick={onOpenSearch}
-              className="hidden md:flex items-center bg-zinc-100 hover:bg-zinc-200/80 rounded-full px-4 py-2 cursor-pointer transition-colors w-44 lg:w-56"
+              className="hidden lg:flex items-center bg-zinc-100 hover:bg-zinc-200/80 rounded-full px-4 py-2 cursor-pointer transition-colors w-44 lg:w-56"
             >
               <SearchIcon className="h-4 w-4 text-zinc-500 mr-2 flex-shrink-0" />
               <span className="text-xs text-zinc-400 font-medium select-none">Search</span>
@@ -321,7 +321,7 @@ export default function Header({
             {/* Mobile Search Icon Button */}
             <button
               onClick={onOpenSearch}
-              className="md:hidden p-2 rounded-full hover:bg-gray-100 transition-colors text-black"
+              className="lg:hidden p-2 rounded-full hover:bg-gray-100 transition-colors text-black"
               title="Search"
             >
               <SearchIcon className="h-5.5 w-5.5" />
@@ -346,7 +346,7 @@ export default function Header({
             {/* Hamburger Button (Mobile Only) */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="md:hidden p-2 rounded-full hover:bg-gray-100 text-black transition-colors"
+              className="lg:hidden p-2 rounded-full hover:bg-gray-100 text-black transition-colors"
               title="Open Menu"
             >
               <Menu className="h-5.5 w-5.5" />
@@ -399,14 +399,14 @@ export default function Header({
 
       {/* Slide-out Mobile Navigation Menu (Drawer) */}
       <div
-        className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-300 lg:hidden ${
           mobileMenuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={() => setMobileMenuOpen(false)}
       />
 
       <div
-        className={`fixed top-0 right-0 bottom-0 z-50 flex h-full w-[300px] flex-col bg-white shadow-2xl transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 right-0 bottom-0 z-50 flex h-full w-[300px] flex-col bg-white shadow-2xl transition-transform duration-300 lg:hidden ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

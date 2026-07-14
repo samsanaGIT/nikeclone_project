@@ -2,8 +2,8 @@ import React from "react";
 
 export default function JordanTheOneBanner() {
   return (
-    <section className="w-full bg-white py-12 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
+    <section className="w-full bg-white py-12">
+      <div className="w-[74vw] mx-auto flex flex-col items-center">
         {/* Top Logo */}
         <div className="mb-10 flex justify-center">
           <img
@@ -14,7 +14,7 @@ export default function JordanTheOneBanner() {
         </div>
 
         {/* Two-Column Grid */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-[3px]">
           {/* Left - Portrait */}
           <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden group">
             <img

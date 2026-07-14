@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -9,25 +9,33 @@ export default function MenHeroCarousel() {
 
   const totalSlides = 2;
 
-  const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-  const nextSlide = () => setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
+  }, [totalSlides]);
 
-  useEffect(() => setProgress(0), [currentSlide]);
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+  }, [totalSlides]);
+
+  useEffect(() => {
+    setProgress(0);
+  }, [currentSlide]);
 
   useEffect(() => {
     if (!isPlaying) return;
     const step = (50 / 7000) * 100;
     const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          nextSlide();
-          return 0;
-        }
-        return prev + step;
-      });
+      setProgress((prev) => prev + step);
     }, 50);
     return () => clearInterval(timer);
   }, [isPlaying]);
+
+  useEffect(() => {
+    if (progress >= 100) {
+      nextSlide();
+      setProgress(0);
+    }
+  }, [progress, nextSlide]);
 
   return (
     <section className="relative w-full h-[60vh] md:h-[85vh] min-h-[600px] overflow-hidden select-none bg-zinc-150">

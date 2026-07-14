@@ -53,24 +53,24 @@ export default function MenFooter() {
     <footer className="w-full bg-white text-zinc-600 py-12 px-6 md:px-12 select-none border-t border-gray-100">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Top Section - 5 Column Grid (Offset by 1) */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 pb-8">
-          <div className="hidden md:block"></div> {/* Empty col to offset */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4 pb-8">
+          <div className="hidden lg:block"></div> {/* Empty col to offset */}
           {firstGrid.map((group) => {
             const isOpen = !!openAccordions[group.title];
             return (
-              <div key={group.title} className="border-b border-gray-100 md:border-b-0 pb-4 md:pb-0">
+              <div key={group.title} className="border-b border-gray-100 sm:border-b-0 pb-4 sm:pb-0">
                 <button
                   onClick={() => toggleAccordion(group.title)}
-                  className="w-full md:hidden flex items-center justify-between py-2 text-left font-semibold text-sm text-black"
+                  className="w-full sm:hidden flex items-center justify-between py-2 text-left font-semibold text-sm text-black"
                 >
                   <span>{group.title}</span>
                   {isOpen ? <Minus className="h-3.5 w-3.5 text-zinc-500" /> : <Plus className="h-3.5 w-3.5 text-zinc-500" />}
                 </button>
-                <h3 className="hidden md:block font-semibold text-sm text-black mb-4">
+                <h3 className="hidden sm:block font-semibold text-sm text-black mb-4">
                   {group.title}
                 </h3>
                 <ul
-                  className={`space-y-3 text-[13px] font-normal text-zinc-500 md:block ${
+                  className={`space-y-3 text-[13px] font-normal text-zinc-500 sm:block ${
                     isOpen ? "block mt-2" : "hidden"
                   }`}
                 >
@@ -88,28 +88,28 @@ export default function MenFooter() {
         </div>
 
         {/* Bottom Section - 5 Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 border-t border-gray-200 pt-10 pb-8 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4 border-t border-gray-200 pt-10 pb-8 relative">
           {secondGrid.map((group) => {
             const isOpen = !!openAccordions[group.title];
             return (
-              <div key={group.title} className="border-b border-gray-100 md:border-b-0 pb-4 md:pb-0">
+              <div key={group.title} className="border-b border-gray-100 sm:border-b-0 pb-4 sm:pb-0">
                 {/* Mobile Accordion Header */}
                 <button
                   onClick={() => toggleAccordion(group.title)}
-                  className="w-full md:hidden flex items-center justify-between py-2 text-left font-semibold text-sm text-black"
+                  className="w-full sm:hidden flex items-center justify-between py-2 text-left font-semibold text-sm text-black"
                 >
                   <span>{group.title}</span>
                   {isOpen ? <Minus className="h-3.5 w-3.5 text-zinc-500" /> : <Plus className="h-3.5 w-3.5 text-zinc-500" />}
                 </button>
 
                 {/* Desktop Header */}
-                <h3 className="hidden md:block font-semibold text-sm text-black mb-4">
+                <h3 className="hidden sm:block font-semibold text-sm text-black mb-4">
                   {group.title}
                 </h3>
 
                 {/* Links list */}
                 <ul
-                  className={`space-y-3 text-[13px] font-normal text-zinc-500 md:block ${
+                  className={`space-y-3 text-[13px] font-normal text-zinc-500 sm:block ${
                     isOpen ? "block mt-2" : "hidden"
                   }`}
                 >
@@ -126,7 +126,7 @@ export default function MenFooter() {
           })}
 
           {/* Country Selector (Aligned right, next to Promotions & Discounts on desktop) */}
-          <div className="md:absolute md:top-10 md:right-0 mt-6 md:mt-0 flex justify-end">
+          <div className="lg:absolute lg:top-10 lg:right-0 col-span-1 sm:col-span-2 lg:col-span-1 mt-6 lg:mt-0 flex lg:justify-end justify-start">
             <button className="flex items-center gap-1.5 text-xs text-zinc-500 hover:text-black font-normal transition-colors">
               <Globe className="h-3.5 w-3.5 text-zinc-400" />
               <span>United States</span>

@@ -3,8 +3,8 @@ import { Jumpman } from "../common/BrandIcons";
 
 export default function JordanEverydayGame() {
   return (
-    <section className="w-full px-6 md:px-12 py-12 md:py-20 bg-white">
-      <div className="max-w-[1440px] mx-auto">
+    <section className="w-full py-12 md:py-20 bg-white">
+      <div className="w-[74vw] mx-auto">
         
         {/* Header - Jumpman Logo */}
         <div className="flex justify-center mb-12">
@@ -12,7 +12,7 @@ export default function JordanEverydayGame() {
         </div>
 
         {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px]">
           
           {/* Left Column (with Text Overlay) */}
           <div className="relative aspect-[4/5] overflow-hidden group cursor-pointer bg-zinc-100">

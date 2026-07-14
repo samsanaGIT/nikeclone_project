@@ -54,7 +54,7 @@ export default function Trending({ onAddToBag }) {
                 </div>
 
                 {/* Centered label below thumbnail */}
-                <span className="mt-3 text-[10px] md:text-xs font-semibold text-zinc-900 leading-tight group-hover:text-black tracking-tight uppercase group-hover:underline max-w-[100px] md:max-w-none">
+                <span className="mt-3 text-[10px] md:text-xs font-semibold text-zinc-900 leading-tight group-hover:text-black tracking-tight uppercase max-w-[100px] md:max-w-none">
                   {shortName}
                 </span>
               </div>
