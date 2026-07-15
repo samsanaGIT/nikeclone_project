@@ -20,7 +20,6 @@ Since this is a frontend UI practice project, many backend and full-site feature
 - **No User Authentication**: There is no login, signup, or user profile system.
 - **No Product Detail Pages**: Clicking on a shoe in the carousels does not take you to a dedicated product page.
 - **Missing Pages**: I only focused on cloning the Main Landing page, the Men's page, and the Responsive Cushioning page. Other categories (Women, Kids, Sale, Custom) are completely ignored.
-
 ## Tech Stack & Tools
 - **Frontend Library**: React 19 (Hooks, Context API)
 - **Routing**: React Router v7 (for smooth page transitions)

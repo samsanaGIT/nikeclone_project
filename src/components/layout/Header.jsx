@@ -297,6 +297,7 @@ export default function Header({
                   className="relative py-2 group hover:text-black transition-colors"
                   onMouseEnter={() => setActiveDropdown(link)}
                   onMouseLeave={() => setActiveDropdown(null)}
+        
                 >
                   {link}
                   <span className={`absolute bottom-0 left-0 h-0.5 bg-black transition-all ${
