@@ -55,11 +55,7 @@ export default function LandingPage({
       <JordanEverydayGame />
 
       {/* Trending Products Catalog */}
-      <Trending
-        onAddToBag={onAddToBag}
-        onToggleWishlist={onToggleWishlist}
-        wishlist={wishlist}
-      />
+      <Trending />
     </>
   );
 }

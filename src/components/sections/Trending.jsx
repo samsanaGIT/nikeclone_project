@@ -40,8 +40,7 @@ export default function Trending({ onAddToBag }) {
             return (
               <div
                 key={product.id}
-                onClick={() => onAddToBag(product)}
-                className="group flex flex-col items-center text-center cursor-pointer select-none"
+                className="group flex flex-col items-center text-center select-none"
               >
                 {/* Small circular/square thumbnail frame */}
                 <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 aspect-square flex items-center justify-center relative overflow-hidden group-hover:scale-[1.04] transition-all duration-300">
