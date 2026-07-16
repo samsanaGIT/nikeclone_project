@@ -19,6 +19,7 @@ Since this is a frontend UI practice project, many backend and full-site feature
 - **No Checkout / Payment**: You can add items to the bag, but you cannot actually buy them or check out.
 - **No User Authentication**: There is no login, signup, or user profile system.
 - **No Product Detail Pages**: Clicking on a shoe in the carousels does not take you to a dedicated product page.
+- **Sweatproof Section Video Limitation**: The Sweatproof section is supposed to feature a video, but it cannot be added directly as a background banner. Instead, it is presented inside a standard video frame.
 - **Missing Pages**: I only focused on cloning the Main Landing page, the Men's page, and the Responsive Cushioning page. Other categories (Women, Kids, Sale, Custom) are completely ignored.
 ## Tech Stack & Tools
 - **Frontend Library**: React 19 (Hooks, Context API)
