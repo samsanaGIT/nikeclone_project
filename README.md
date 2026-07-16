@@ -1,6 +1,6 @@
 # Nike Clone Project
 
-Hi! This is my student project where I built a UI clone of the official Nike website to practice my frontend development skills.
+This is my student project where I built a UI clone of the official Nike website to practice my frontend development skills.
 
 **Original Website Cloned:** [https://www.nike.com/](https://www.nike.com/)
 
@@ -22,6 +22,7 @@ Since this is a frontend UI practice project, many backend and full-site feature
 - **Sweatproof Section Video Limitation**: The Sweatproof section is supposed to feature a video, but it cannot be added directly as a background banner. Instead, it is presented inside a standard video frame.
 - **Missing Pages**: I only focused on cloning the Main Landing page, the Men's page, and the Responsive Cushioning page. Other categories (Women, Kids, Sale, Custom) are completely ignored.
 ## Tech Stack & Tools
+- **Languages**: JavaScript (JSX), HTML5, CSS3
 - **Frontend Library**: React 19 (Hooks, Context API)
 - **Routing**: React Router v7 (for smooth page transitions)
 - **Styling**: Tailwind CSS v4 (configured via `@tailwindcss/vite` plugin)
